@@ -1,10 +1,13 @@
-    using Godot;
+using Godot;
 using System;
 
-public partial class CharacterBody2d : CharacterBody2D
+public partial class Robot : CharacterBody2D
 {
     [Export]
     public int Speed { get; set; } = 100;
+
+    [Export]
+    public string id { get; set; } = "";
 
     private AnimatedSprite2D _sprite;
     private TileDetector _tileDetector;
@@ -31,7 +34,7 @@ public partial class CharacterBody2d : CharacterBody2D
                 _sprite.Play("move_up");
             else if (inputDirection.Y > 0)
                 _sprite.Play("move_down");
-        }
+        }   
         else
         {
             _sprite.Play("idle");
