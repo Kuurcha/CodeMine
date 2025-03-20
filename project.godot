@@ -15,6 +15,10 @@ run/main_scene="res://UI/MainMenu/Layout.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://GameScenes/icon.svg"
 
+[autoload]
+
+SignalBus="*res://Assets/Shared/SignalBus.cs"
+
 [display]
 
 window/size/viewport_width=1080

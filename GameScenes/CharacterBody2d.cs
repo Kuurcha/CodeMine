@@ -3,6 +3,9 @@ using System;
 
 public partial class Robot : CharacterBody2D
 {
+
+    private SignalBus _signalBus;
+
     [Export]
     public int Speed { get; set; } = 100;
 
@@ -16,7 +19,20 @@ public partial class Robot : CharacterBody2D
     {
         _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D"); 
         _tileDetector = GetNode<TileDetector>("TileDetector");
+        _signalBus = GetNode<SignalBus>("/Root/SignalBus/");
+
+       
+        _signalBus.SimulationStarted += ProcessInput;
+
     }
+
+    public void ProcessInput(string code)
+    {
+        GD.Print("execution file passed ahahahaha loh");
+        GD.Print(code);
+    }
+
+
 
     public void GetInput()
     {

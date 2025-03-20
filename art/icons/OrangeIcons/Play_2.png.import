@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dknshfc30msih"
-path="res://.godot/imported/mask.bmp-bd24e3a0536cc6aac9e4ecf2b7057349.ctex"
+uid="uid://bgprpyikhel6u"
+path="res://.godot/imported/Play_2.png-42dc6c0c626da41264ee14523e00a25c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/icons/OrangeIcons/mask.bmp"
-dest_files=["res://.godot/imported/mask.bmp-bd24e3a0536cc6aac9e4ecf2b7057349.ctex"]
+source_file="res://art/icons/OrangeIcons/Play_2.png"
+dest_files=["res://.godot/imported/Play_2.png-42dc6c0c626da41264ee14523e00a25c.ctex"]
 
 [params]
 

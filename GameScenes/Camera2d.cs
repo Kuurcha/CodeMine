@@ -35,6 +35,7 @@ public partial class Camera2d : Camera2D
     
     public override void _Ready()
 	{
+
         //CenterScene();
         /*Zoom = new Vector2(3.0f, 3.0f);*/
     }

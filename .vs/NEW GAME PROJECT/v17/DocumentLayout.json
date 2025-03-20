@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Diploma\\TestCommands\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\ui\\levelselection\\levelselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:ui\\levelselection\\levelselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\ui\\mainmenu\\panelcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:ui\\mainmenu\\panelcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\characterbody2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\characterbody2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Diploma\\TestCommands\\UI\\UiLayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\UiLayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\new game project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:new game project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\misc\\robotmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +33,26 @@
     {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\ui\\levelselection\\gridcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:ui\\levelselection\\gridcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\ui\\levelselection\\levelselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:ui\\levelselection\\levelselect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\ui\\mainmenu\\panelcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:ui\\mainmenu\\panelcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Diploma\\TestCommands\\UI\\UiLayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:UI\\UiLayout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\new game project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:new game project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +62,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CharacterBody2d.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\CharacterBody2d.cs",
+              "RelativeDocumentMoniker": "GameScenes\\CharacterBody2d.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\CharacterBody2d.cs",
+              "RelativeToolTip": "GameScenes\\CharacterBody2d.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwBQAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T13:19:23.381Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SideMenu.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\SideMenu.cs",
+              "RelativeDocumentMoniker": "GameScenes\\SideMenu.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\SideMenu.cs",
+              "RelativeToolTip": "GameScenes\\SideMenu.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:12:07.072Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -53,33 +105,77 @@
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PanelContainer.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\UI\\MainMenu\\PanelContainer.cs",
-              "RelativeDocumentMoniker": "UI\\MainMenu\\PanelContainer.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\UI\\MainMenu\\PanelContainer.cs",
-              "RelativeToolTip": "UI\\MainMenu\\PanelContainer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAkAAAA",
+              "DocumentIndex": 5,
+              "Title": "RobotManager.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\RobotManager.cs",
+              "RelativeDocumentMoniker": "Misc\\RobotManager.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\RobotManager.cs",
+              "RelativeToolTip": "Misc\\RobotManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T13:05:10.422Z"
+              "WhenOpened": "2025-03-11T18:13:07.399Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "LevelSelect.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\UI\\LevelSelection\\LevelSelect.cs",
-              "RelativeDocumentMoniker": "UI\\LevelSelection\\LevelSelect.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\UI\\LevelSelection\\LevelSelect.cs*",
-              "RelativeToolTip": "UI\\LevelSelection\\LevelSelect.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Title": "MapLogic.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
+              "RelativeDocumentMoniker": "GameScenes\\MapLogic.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
+              "RelativeToolTip": "GameScenes\\MapLogic.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAiwAoAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T12:51:17.458Z",
+              "WhenOpened": "2025-03-19T13:10:13.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Camera2d.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Camera2d.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Camera2d.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Camera2d.cs",
+              "RelativeToolTip": "GameScenes\\Camera2d.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:36:54.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FileHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\FileHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\FileHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\FileHelper.cs",
+              "RelativeToolTip": "Helper\\FileHelper.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAiwBkAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T16:10:32.288Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "TileDetector.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
+              "RelativeDocumentMoniker": "Misc\\TileDetector.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
+              "RelativeToolTip": "Misc\\TileDetector.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-11T18:13:03.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "GridContainer.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\UI\\LevelSelection\\GridContainer.cs",
               "RelativeDocumentMoniker": "UI\\LevelSelection\\GridContainer.cs",
@@ -87,11 +183,51 @@
               "RelativeToolTip": "UI\\LevelSelection\\GridContainer.cs",
               "ViewState": "AQIAAAcAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T12:49:32.095Z"
+              "WhenOpened": "2025-03-18T12:49:32.095Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "LevelSelect.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\UI\\LevelSelection\\LevelSelect.cs",
+              "RelativeDocumentMoniker": "UI\\LevelSelection\\LevelSelect.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\UI\\LevelSelection\\LevelSelect.cs",
+              "RelativeToolTip": "UI\\LevelSelection\\LevelSelect.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA0AAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T12:51:17.458Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PanelContainer.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\UI\\MainMenu\\PanelContainer.cs",
+              "RelativeDocumentMoniker": "UI\\MainMenu\\PanelContainer.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\UI\\MainMenu\\PanelContainer.cs",
+              "RelativeToolTip": "UI\\MainMenu\\PanelContainer.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAQwDgAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T13:05:10.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "SignalBus.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
+              "RelativeDocumentMoniker": "Assets\\Shared\\SignalBus.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
+              "RelativeToolTip": "Assets\\Shared\\SignalBus.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAwAYAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T18:05:48.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "UiLayout.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\UI\\UiLayout.cs",
               "RelativeDocumentMoniker": "UI\\UiLayout.cs",
@@ -103,7 +239,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "New Game Project",
               "DocumentMoniker": "C:\\DIPLOMA\\TESTCOMMANDS\\New Game Project.csproj",
               "RelativeDocumentMoniker": "New Game Project.csproj",
@@ -111,34 +247,6 @@
               "RelativeToolTip": "New Game Project.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-03-17T13:56:45.689Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RobotManager.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\RobotManager.cs",
-              "RelativeDocumentMoniker": "Misc\\RobotManager.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\RobotManager.cs",
-              "RelativeToolTip": "Misc\\RobotManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T18:13:07.399Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TileDetector.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
-              "RelativeDocumentMoniker": "Misc\\TileDetector.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
-              "RelativeToolTip": "Misc\\TileDetector.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-11T18:13:03.051Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

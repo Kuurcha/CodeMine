@@ -1,4 +1,5 @@
 using Godot;
+using NewGameProject.Helper;
 using System;
 
 public partial class SideMenu : Control
@@ -6,14 +7,15 @@ public partial class SideMenu : Control
     private TextEdit _codeInput;
     private Control _menuPanel;
     private Button _launchButton;
-
+    private string _path = "user://saved_text.txt";
+    private SignalBus _signalBus;
     public override void _Ready()
     {
-        // Find the existing cog button
-        var cogButton = GetNode<TextureButton>("TextureButton"); // Adjust if in a different path
-        if (cogButton != null)
+        _signalBus = GetNode<SignalBus>("/root/SignalBus");
+        var playButton = GetNode<TextureButton>("PlayButton"); 
+        if (playButton != null)
         {
-            cogButton.Connect("pressed", Callable.From(ToggleMenu));
+            playButton.Connect("pressed", Callable.From(OnPlayPressed));
         }
         else
         {
@@ -21,46 +23,85 @@ public partial class SideMenu : Control
             return;
         }
 
-        // Create the menu panel (hidden by default)
-        _menuPanel = new Control();
-        _menuPanel.Visible = false;
-        _menuPanel.SizeFlagsHorizontal = Control.SizeFlags.Expand;
-        _menuPanel.SizeFlagsVertical = Control.SizeFlags.Expand;
-        _menuPanel.Modulate = new Color(0, 0, 0, 0.8f); // Semi-transparent overlay
+        GD.Print("Loaded editor menu.");
+
+
+        _menuPanel = new Control
+        {
+            Visible = true,
+            SizeFlagsHorizontal = Control.SizeFlags.Expand,
+            SizeFlagsVertical = Control.SizeFlags.Expand,
+            Modulate = new Color(0.5f, 0.5f, 0.5f, 0.9f) 
+        };
         AddChild(_menuPanel);
 
-        // Create a container for the menu
-        var panel = new Panel();
-        panel.Size = new Vector2(400, 300);
-        panel.Position = new Vector2(100, 100);
-        panel.AddThemeStyleboxOverride("panel", new StyleBoxFlat { BgColor = new Color(0.15f, 0.15f, 0.15f) });
+        // Create a container for the menu      
+        var panel = new Panel
+        {
+            Size = new Vector2(367, 600),
+            Position = new Vector2(0, 0)
+        };
+
+
+        var panelStyle = new StyleBoxFlat { BgColor = new Color(0.4f, 0.4f, 0.4f) }; 
+        panel.AddThemeStyleboxOverride("panel", panelStyle);
         _menuPanel.AddChild(panel);
 
         // Create a TextEdit box for entering code
-        _codeInput = new TextEdit();
-        _codeInput.Size = new Vector2(380, 200);
-        _codeInput.Position = new Vector2(10, 10);
-        _codeInput.WrapMode = TextEdit.LineWrappingMode.Boundary;
+        _codeInput = new TextEdit
+        {
+            Size = new Vector2(350, 440),
+            Position = new Vector2(10, 10),
+            WrapMode = TextEdit.LineWrappingMode.Boundary
+        };
+
+
+        Theme textTheme = _codeInput.Theme ?? new Theme();
+        textTheme.SetColor("font_color", "TextEdit", new Color(1, 1, 1));
+        textTheme.SetColor("background_color", "TextEdit", new Color(0, 0, 0));
+        textTheme.SetFontSize("Font Size", "TextEdit", 4);
+        _codeInput.Theme = textTheme;
+   
+
         panel.AddChild(_codeInput);
 
         // Create a Launch Button
-        _launchButton = new Button();
-        _launchButton.Text = "Launch";
-        _launchButton.Position = new Vector2(10, 220);
-        _launchButton.Size = new Vector2(380, 40);
+        _launchButton = new Button
+        {
+            Text = "Save",
+            Size = new Vector2(20, 20)
+        };
+
+
+        Theme buttonTheme = _launchButton.Theme ?? new Theme();
+        buttonTheme.SetColor("font_color", "Button", new Color(1, 1, 1));
+        buttonTheme.SetColor("font_color_pressed", "Button", new Color(1, 1, 1)); 
+        buttonTheme.SetColor("bg_color", "Button", new Color(0, 0, 0));
+        buttonTheme.SetFontSize("font_size", "Button", 10);
+        _launchButton.Theme = buttonTheme;
+        _launchButton.OffsetRight = 180;
+        _launchButton.OffsetTop = 455;
+        _launchButton.OffsetLeft = 180;
+        _launchButton.OffsetBottom = 455;
+
+
         _launchButton.Connect("pressed", Callable.From(OnLaunchPressed));
         panel.AddChild(_launchButton);
     }
 
-    private void ToggleMenu()
-    {
-        _menuPanel.Visible = !_menuPanel.Visible;
-    }
 
     private void OnLaunchPressed()
     {
         string code = _codeInput.Text;
-        GD.Print("Executing code:\n" + code);
-        _menuPanel.Visible = false; // Hide menu after launching
+        FileHelper.SaveText(code, _path);
     }
+    
+    private void OnPlayPressed()
+    {
+
+       string executionFile = FileHelper.LoadText(_path);
+       _signalBus.EmitSignal("SimulationStarted", executionFile);
+       GD.Print("executionFile loaded: ");
+    }
+
 }
