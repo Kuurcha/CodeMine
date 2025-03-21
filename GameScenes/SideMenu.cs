@@ -1,6 +1,7 @@
 using Godot;
 using NewGameProject.Helper;
 using System;
+using System.Collections.Generic;
 
 public partial class SideMenu : Control
 {
@@ -9,6 +10,10 @@ public partial class SideMenu : Control
     private Button _launchButton;
     private string _path = "user://saved_text.txt";
     private SignalBus _signalBus;
+    private Queue<string> commandQueue = new Queue<string>();
+
+    [Export] 
+    private float GameSpeed = 1.0f;
     public override void _Ready()
     {
         _signalBus = GetNode<SignalBus>("/root/SignalBus");
@@ -95,13 +100,38 @@ public partial class SideMenu : Control
         string code = _codeInput.Text;
         FileHelper.SaveText(code, _path);
     }
-    
-    private void OnPlayPressed()
-    {
 
-       string executionFile = FileHelper.LoadText(_path);
-       _signalBus.EmitSignal("SimulationStarted", executionFile);
-       GD.Print("executionFile loaded: ");
+    private async void OnPlayPressed()
+    {
+        string executionFile = FileHelper.LoadText(_path);
+        GD.Print("Execution file loaded.");
+
+
+        string[] commands = executionFile.Split('\n');
+        foreach (string command in commands)
+        {
+            _signalBus.EmitSignal(nameof(SignalBus.SimulationStarted), command);
+
+            float delay = 1.0f / GameSpeed;
+            await ToSignal(GetTree().CreateTimer(delay), "timeout");
+        }
+
+
     }
 
+/*    private async void ProcessNextCommand()
+    {
+        if (commandQueue.Count == 0)
+        {
+            GD.Print("All commands executed.");
+            return;
+        }
+
+        string command = commandQueue.Dequeue();
+
+    
+        _signalBus.EmitSignal("SimulationStep", command);
+        ProcessNextCommand();
+    }
+*/
 }

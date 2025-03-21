@@ -9,6 +9,6 @@ namespace NewGameProject.Misc
     internal class Robo
 
     {
-        private List<Robot> robots = new List<Robot>();
+
     }
 }

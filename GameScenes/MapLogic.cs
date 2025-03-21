@@ -9,14 +9,12 @@ public partial class MapLogic : Node2D
     public override void _Ready()
 	{
         _signalBus = GetNode<SignalBus>("/root/SignalBus");
-        _signalBus.SimulationStarted += ProcessInput;
-        //CenterScene();
     }
 
     public void ProcessInput(string code)
     {
-        GD.Print("execution file passed ahahahaha loh");
-        GD.Print(code);
+/*        GD.Print("execution file passed ahahahaha loh");
+        GD.Print(code);*/
     }
 
 

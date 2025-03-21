@@ -19,7 +19,7 @@ public partial class Camera2d : Camera2D
                 // Convert tilemap rect to world coordinates
                 Vector2 min = tileMap.MapToLocal((Vector2I)usedRect.Position);
                 Vector2 max = tileMap.MapToLocal((Vector2I)usedRect.End);
-
+                    
                 totalMin = new Vector2(Mathf.Min(totalMin.X, min.X), Mathf.Min(totalMin.Y, min.Y));
                 totalMax = new Vector2(Mathf.Max(totalMax.X, max.X), Mathf.Max(totalMax.Y, max.Y));
             }
@@ -32,16 +32,18 @@ public partial class Camera2d : Camera2D
         Position = center;
     }
 
-    
+
     public override void _Ready()
-	{
+    {
+
+
 
         //CenterScene();
         /*Zoom = new Vector2(3.0f, 3.0f);*/
     }
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process(double delta)
+    // Called every frame. 'delta' is the elapsed time since the previous frame.
+    public override void _Process(double delta)
 	{
 	}
 }
