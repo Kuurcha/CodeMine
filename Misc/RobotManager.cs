@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace NewGameProject.Misc
 {
-    internal class Robo
-
+    public class RobotManager
     {
 
     }

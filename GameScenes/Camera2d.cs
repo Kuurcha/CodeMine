@@ -3,7 +3,7 @@ using System;
 
 public partial class Camera2d : Camera2D
 {
-    // Called when the node enters the scene tree for the first time.
+
 
     private void CenterScene()
     {
@@ -15,8 +15,6 @@ public partial class Camera2d : Camera2D
             if (child is TileMapLayer tileMap)
             {
                 Rect2 usedRect = tileMap.GetUsedRect();
-
-                // Convert tilemap rect to world coordinates
                 Vector2 min = tileMap.MapToLocal((Vector2I)usedRect.Position);
                 Vector2 max = tileMap.MapToLocal((Vector2I)usedRect.End);
                     
@@ -25,10 +23,8 @@ public partial class Camera2d : Camera2D
             }
         }
 
-        // Calculate the center of the tilemaps in world space
         Vector2 center = (totalMin + totalMax) * 0.5f;
 
-        // Set the Camera2D position to the tilemap center
         Position = center;
     }
 

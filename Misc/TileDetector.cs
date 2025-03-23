@@ -1,4 +1,5 @@
 using Godot;
+using NewGameProject.Helper;
 using System;
 
 public partial class TileDetector : Node2D
@@ -7,7 +8,7 @@ public partial class TileDetector : Node2D
 
     public override void _Ready()
     {
-        _tileMap = GetNode<TileMapLayer>("../../Map/FloorMap"); 
+        _tileMap = NodeHelper.FindNode<TileMapLayer>(this, "FloorMap");
     }
 
     public void DetectTiles(Vector2 position)

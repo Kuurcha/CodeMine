@@ -1,26 +1,27 @@
-using Godot;
+    using Godot;
 using System;
 using static Godot.TextServer;
 
-public partial class CharacterBody2d2 : CharacterBody2D
+public partial class Robot : CharacterBody2D
 {
 
     private SignalBus _signalBus;
     private Vector2 _velocity = Vector2.Zero;
     private Vector2 _targetPosition = Vector2.Zero;
     private bool _isMoving = false;
-
-    [Export]
-    public int Speed { get; set; } = 100;
-
+    private AnimatedSprite2D _sprite;
+    private TileDetector _tileDetector;
     public int tileSize { get; set; } = 16;
 
     [Export]
-    public string id { get; set; } = "";
+    public int Speed { get; set; } = 100;
+    [Export]
+    public string Id { get; set; } = "";
+    [Export]
+    public string[] Commands = new string[0];
+    [Export]
+    public string LastDirection = "down";
 
-    private string lastDirection = "down";
-    private AnimatedSprite2D _sprite;
-    private TileDetector _tileDetector;
 
     public override void _Ready()
     {
@@ -78,10 +79,9 @@ public partial class CharacterBody2d2 : CharacterBody2D
             default:
                 return;
         }
-        lastDirection = direction;
+        LastDirection = direction;
 
         _velocity = moveDirection  * Speed;
-        _tileDetector.DetectTiles(Position);
         _targetPosition = Position + moveDirection * totalDistance;
         _isMoving = true;
     }
@@ -92,6 +92,7 @@ public partial class CharacterBody2d2 : CharacterBody2D
         {   
             Position += _velocity * (float) delta;
 
+            _tileDetector.DetectTiles(Position);
             if ((Position - _targetPosition).Length() <= Speed * delta)
             {
                 Position = _targetPosition;
@@ -103,7 +104,7 @@ public partial class CharacterBody2d2 : CharacterBody2D
 
         if (_velocity.Length() == 0)
         {
-            switch (lastDirection)
+            switch (LastDirection)
             {
                 case "left":
                     _sprite.Play("idle_left");

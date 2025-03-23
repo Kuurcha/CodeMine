@@ -60,6 +60,7 @@ public partial class SideMenu : Control
             WrapMode = TextEdit.LineWrappingMode.Boundary
         };
 
+        _codeInput.Text = FileHelper.LoadText(_path);
 
         Theme textTheme = _codeInput.Theme ?? new Theme();
         textTheme.SetColor("font_color", "TextEdit", new Color(1, 1, 1));
