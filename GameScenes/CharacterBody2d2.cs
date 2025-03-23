@@ -7,9 +7,13 @@ public partial class CharacterBody2d2 : CharacterBody2D
 
     private SignalBus _signalBus;
     private Vector2 _velocity = Vector2.Zero;
+    private Vector2 _targetPosition = Vector2.Zero;
+    private bool _isMoving = false;
 
     [Export]
     public int Speed { get; set; } = 100;
+
+    public int tileSize { get; set; } = 16;
 
     [Export]
     public string id { get; set; } = "";
@@ -48,9 +52,10 @@ public partial class CharacterBody2d2 : CharacterBody2D
         if (parts.Length != 2) return;
 
         string direction = parts[0].ToLower();
-        if (!int.TryParse(parts[1], out int steps)) return; // Convert "2" to int
+        if (!int.TryParse(parts[1], out int steps)) return; 
 
         Vector2 moveDirection = Vector2.Zero;
+        int totalDistance = steps * tileSize;
 
         switch (direction)
         {
@@ -75,39 +80,26 @@ public partial class CharacterBody2d2 : CharacterBody2D
         }
         lastDirection = direction;
 
-        _velocity = moveDirection * steps * Speed;
+        _velocity = moveDirection  * Speed;
         _tileDetector.DetectTiles(Position);
+        _targetPosition = Position + moveDirection * totalDistance;
+        _isMoving = true;
     }
-
-
-
-    public void GetInput()
-    {
-        /*
-                Vector2 inputDirection = Input.GetVector("Left", "Right", "Up", "Down");
-                Velocity = inputDirection * Speed;
-
-                if (inputDirection != Vector2.Zero)
-                {
-                    if (inputDirection.X > 0)
-                        _sprite.Play("move_right");
-                    else if (inputDirection.X < 0)
-                        _sprite.Play("move_left");
-                    else if (inputDirection.Y < 0)
-                        _sprite.Play("move_up");
-                    else if (inputDirection.Y > 0)
-                        _sprite.Play("move_down");
-                }   
-                else
-                {
-                    _sprite.Play("idle");
-                }*/
-    }
-
     public override void _PhysicsProcess(double delta)
     {
-        Velocity = _velocity;
-        MoveAndSlide();
+
+        if (_isMoving)
+        {   
+            Position += _velocity * (float) delta;
+
+            if ((Position - _targetPosition).Length() <= Speed * delta)
+            {
+                Position = _targetPosition;
+                _velocity = Vector2.Zero;
+                _isMoving = false;
+
+            }
+        }
 
         if (_velocity.Length() == 0)
         {
@@ -126,9 +118,12 @@ public partial class CharacterBody2d2 : CharacterBody2D
                     _sprite.Play("idle_down");
                     break;
                 default:
-                    _sprite.Play("idle_down"); 
+                    _sprite.Play("idle_down");
                     break;
             }
         }
+
+        MoveAndSlide();
+
     }
 }
