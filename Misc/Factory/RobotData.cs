@@ -9,12 +9,12 @@ namespace NewGameProject.Misc.Factory
 {
     public class RobotData
     {
-        public Vector2 Position { get; set; }
+        public Vector2I Position { get; set; }
         public string Id { get; set; }
         public int Speed { get; set; }
         public string[] Commands { get; set; }
 
-        public RobotData(Vector2 position, string id, int speed, string[] commands)
+        public RobotData(Vector2I position, string id, int speed, string[] commands)
         {
             Position = position;
             Id = id;

@@ -1,20 +1,24 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public partial class LevelSelect :   Godot.PanelContainer
 {
     private Dictionary<string, string> levelDictionary = new Dictionary<string, string>
     {
-        { "Level 1", "res://GameScenes/Map.tscn" },
+        { "Level 1", "res://GameScenes/Levels/level_1.tscn" },
         { "Level 2", "res://Scenes/Level2.tscn" },
         { "Level 3", "res://Scenes/Level3.tscn" },
         { "Level 4", "res://Scenes/Level4.tscn" },
         { "Level 5", "res://Scenes/Level5.tscn" }
     };
+    private Node _mapNode;
+
 
     public override void _Ready()
     {
+
 
         var vbox = new VBoxContainer();
         vbox.SizeFlagsHorizontal = Control.SizeFlags.Expand | Control.SizeFlags.Fill;
@@ -55,10 +59,14 @@ public partial class LevelSelect :   Godot.PanelContainer
         return button;
     }
 
+
+
     private void LoadLevel(string levelPath)
     {
-        GD.Print($"Loading {levelPath}");
-        GetTree().ChangeSceneToFile(levelPath);
+        string mapPath = "res://GameScenes/Map.tscn";
+        SignalBus _signalBus = GetNode<SignalBus>("/root/SignalBus");
+        _signalBus.LevelPath = levelPath;
+        GetTree().ChangeSceneToFile(mapPath);
     }
 
     private void OnBackPressed()

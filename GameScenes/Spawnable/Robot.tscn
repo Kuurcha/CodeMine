@@ -8,13 +8,13 @@
 atlas = ExtResource("2_nbnro")
 region = Rect2(32, 96, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ose82"]
-atlas = ExtResource("2_nbnro")
-region = Rect2(0, 0, 16, 16)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_imf7d"]
 atlas = ExtResource("2_nbnro")
 region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ose82"]
+atlas = ExtResource("2_nbnro")
+region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o5gt0"]
 atlas = ExtResource("2_nbnro")
@@ -128,7 +128,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ose82")
+"texture": SubResource("AtlasTexture_imf7d")
 }],
 "loop": true,
 "name": &"idle_left",
@@ -136,7 +136,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_imf7d")
+"texture": SubResource("AtlasTexture_ose82")
 }],
 "loop": true,
 "name": &"idle_right",
@@ -274,7 +274,7 @@ script = ExtResource("1_fq6qg")
 z_index = 999
 position = Vector2(4, 3)
 sprite_frames = SubResource("SpriteFrames_x53nm")
-animation = &"mine_left"
+animation = &"idle_left"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 999

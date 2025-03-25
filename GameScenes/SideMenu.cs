@@ -1,4 +1,5 @@
 using Godot;
+using NewGameProject.GameScenes.Levels;
 using NewGameProject.Helper;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,8 @@ public partial class SideMenu : Control
     private string _path = "user://saved_text.txt";
     private SignalBus _signalBus;
     private Queue<string> commandQueue = new Queue<string>();
+    private GenericLevel currentLevel;
+
 
     [Export] 
     private float GameSpeed = 1.0f;
@@ -27,6 +30,20 @@ public partial class SideMenu : Control
             GD.PrintErr("TextureButton not found!");
             return;
         }
+
+        var restartSimulation = GetNode<TextureButton>("RestartSimulation");
+        if (restartSimulation != null)
+        {
+            restartSimulation.Connect("pressed", Callable.From(OnResetPressed));
+        }
+        else
+        {
+            GD.PrintErr("RestartSimulation not found!");
+            return;
+        }
+
+
+  
 
         GD.Print("Loaded editor menu.");
 
@@ -118,6 +135,18 @@ public partial class SideMenu : Control
         }
 
 
+    }
+
+    private void OnResetPressed()
+    {
+        if (_signalBus.CurrentLevel != null)
+        {
+            _signalBus.CurrentLevel.ResetLevel();
+        }
+        else
+        {
+            GD.Print("Level not loaded");
+        }
     }
 
 /*    private async void ProcessNextCommand()

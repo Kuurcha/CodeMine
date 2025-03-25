@@ -11,13 +11,12 @@ namespace NewGameProject.Misc.Factory
     {
         private static PackedScene _robotScene = GD.Load<PackedScene>("res://GameScenes/Spawnable/Robot.tscn");
 
-        public static Robot CreateRobot(Vector2 position, string id, int speed, string[] commands, Node parent)
+        public static Robot CreateRobot(Vector2I Position, string id, int speed, string[] commands, Node parent)
         {
             Robot robot = _robotScene.Instantiate<Robot>();
 
-            robot.Position = position;
+            robot.GridPosition = Position;
             robot.Id = id;
-            robot.Speed = speed;
             robot.Commands = commands;
 
             parent.AddChild(robot);

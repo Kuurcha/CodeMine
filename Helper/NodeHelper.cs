@@ -1,4 +1,5 @@
 ﻿using Godot;
+using NewGameProject.GameScenes.Levels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,19 @@ namespace NewGameProject.Helper
                 }
 
                 parent = parent.GetParent(); 
+            }
+            return null;
+        }
+
+        public static GenericLevel FindGenericLevel(Node currentNode)
+        {
+
+            foreach (Node node in currentNode.GetTree().Root.GetChildren())
+            {
+                if (node is GenericLevel level)
+                {
+                    return level;
+                }
             }
             return null;
         }

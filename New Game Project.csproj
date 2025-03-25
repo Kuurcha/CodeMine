@@ -6,7 +6,4 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>NewGameProject</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="GameScenes\Levels\" />
-  </ItemGroup>
 </Project>
