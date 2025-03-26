@@ -9,6 +9,7 @@ namespace NewGameProject.GameScenes.Levels
 {
     public abstract partial class GenericLevel : Node2D
     {
+
         public abstract void ResetLevel();
     }
 }

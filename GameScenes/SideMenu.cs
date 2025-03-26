@@ -14,7 +14,6 @@ public partial class SideMenu : Control
     private Queue<string> commandQueue = new Queue<string>();
     private GenericLevel currentLevel;
 
-
     [Export] 
     private float GameSpeed = 1.0f;
     public override void _Ready()
@@ -43,7 +42,22 @@ public partial class SideMenu : Control
         }
 
 
-  
+        var hideGridButton = GetNode<TextureButton>("HideGrid");
+        if (hideGridButton != null)
+        {
+            hideGridButton.Connect("pressed", Callable.From(OnHidePressed));
+            
+        }
+        else
+        {
+            GD.PrintErr("RestartSimulation not found!");
+            return;
+        }
+
+        
+
+
+
 
         GD.Print("Loaded editor menu.");
 
@@ -149,6 +163,10 @@ public partial class SideMenu : Control
         }
     }
 
+    private void OnHidePressed()
+    {
+        _signalBus.EmitToggleGrid();    
+    }
 /*    private async void ProcessNextCommand()
     {
         if (commandQueue.Count == 0)

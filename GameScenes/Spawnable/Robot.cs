@@ -113,24 +113,25 @@ public partial class Robot : CharacterBody2D
         private async Task MoveStepByStep(Vector2I moveDirection, int steps)
         {
             _isMoving = true;
-            float speed = tileSize * 1f;
+
+            float duration = 0.3f; 
+
             for (int i = 0; i < steps; i++)
             {
-          
                 Vector2 targetWorldPosition = (Vector2)(GridPosition + moveDirection) * tileSize;
                 bool shouldWalk = _tileDetector.IsNextTileWalkable(GridPosition, moveDirection);
-                while (shouldWalk && (Position - targetWorldPosition).Length() > 0.1f)
-                {
-                    Velocity = (targetWorldPosition - Position).Normalized() * speed; 
-                    MoveAndSlide();
-                    await ToSignal(GetTree(), "physics_frame");
-                }
-                if (shouldWalk)
-                    GridPosition += moveDirection;
-                Velocity = Vector2.Zero;
+
+                if (!shouldWalk) break;
+
+                var tween = GetTree().CreateTween();
+                tween.TweenProperty(this, "position", targetWorldPosition, duration).SetTrans(Tween.TransitionType.Linear);
+
+                GridPosition += moveDirection;
+
+                await ToSignal(tween, "finished"); 
             }
 
-            playIdleAnimation();
+        playIdleAnimation();
             _isMoving = false;
         }
 

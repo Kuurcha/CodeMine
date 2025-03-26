@@ -10,6 +10,7 @@ namespace NewGameProject.Helper
 {
     public static class NodeHelper
     {
+
         public static T FindNode<T>(Node startingNode, string nodeName) where T : Node
         {
             Node parent = startingNode;

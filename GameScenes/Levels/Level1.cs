@@ -10,8 +10,10 @@ using System.Collections.Generic;
         private List<Robot> _robots = new List<Robot>();
         private TileMapLayer _floorMap;
         private TileMapLayer _wallMap;
+        private SignalBus _signalBus;
 
-        private TileMapLayer _initialFloorMap;
+
+    private TileMapLayer _initialFloorMap;
         private TileMapLayer _initialWallMap;
         public override void _Ready()
         {
@@ -19,7 +21,7 @@ using System.Collections.Generic;
             GD.Print("LEVEL 1 LOADED");
             _initialRobotConfigs =  new List<RobotData>
             {
-                new RobotData(new Vector2I(4, 0), "robot_1", 80, new string[] { }),
+                new RobotData(new Vector2I(0, 0), "robot_1", 80, new string[] { }),
             };
             _floorMap = GetNode<TileMapLayer>("FloorMap");
             _wallMap = GetNode<TileMapLayer>("WallMap");
@@ -28,6 +30,8 @@ using System.Collections.Generic;
             _initialWallMap = _wallMap.Duplicate() as TileMapLayer;
 
             _robots = RobotFactory.CreateRobotsForLevel(this, _initialRobotConfigs);
+            _signalBus = GetNode<SignalBus>("/root/SignalBus");
+            _signalBus.LevelOrigin = GlobalPosition;
         }
 
         private void ReplaceTileMapLayer(TileMapLayer oldLayer, TileMapLayer newLayer)
