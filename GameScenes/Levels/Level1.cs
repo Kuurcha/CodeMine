@@ -7,13 +7,10 @@ using System.Collections.Generic;
     public partial class Level1 : GenericLevel
     {
         private List<RobotData> _initialRobotConfigs;
-        private List<Robot> _robots = new List<Robot>();
-        private TileMapLayer _floorMap;
-        private TileMapLayer _wallMap;
-        private SignalBus _signalBus;
 
+        private Camera2D _camera;
 
-    private TileMapLayer _initialFloorMap;
+        private TileMapLayer _initialFloorMap;
         private TileMapLayer _initialWallMap;
         public override void _Ready()
         {
@@ -28,12 +25,12 @@ using System.Collections.Generic;
 
             _initialFloorMap = _floorMap.Duplicate() as TileMapLayer;
             _initialWallMap = _wallMap.Duplicate() as TileMapLayer;
-
+            _camera = GetTree().CurrentScene.GetNode<Camera2D>("Camera2D");
             _robots = RobotFactory.CreateRobotsForLevel(this, _initialRobotConfigs);
-            _signalBus = GetNode<SignalBus>("/root/SignalBus");
-            _signalBus.LevelOrigin = GlobalPosition;
-        }
+            base._Ready();
 
+        }
+        
         private void ReplaceTileMapLayer(TileMapLayer oldLayer, TileMapLayer newLayer)
         {
             Node parent = oldLayer.GetParent();
@@ -46,7 +43,8 @@ using System.Collections.Generic;
             }
         }
 
-        public override void _Process(double delta)
+
+    public override void _Process(double delta)
 	    {
 
 	    }

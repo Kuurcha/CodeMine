@@ -7,6 +7,7 @@ public partial class SignalBus : Node
     public string LevelPath { get; set; } = string.Empty;
     public GenericLevel CurrentLevel { get; set; }
 
+    public static int TileSize = 16;
     public Vector2 LevelOrigin { get;    set; }
     public void SetCurrentLevel(GenericLevel level)
     {
@@ -15,6 +16,10 @@ public partial class SignalBus : Node
 
     [Signal]
     public delegate void SimulationStartedEventHandler(string code);
+
+    [Signal]
+    public delegate void GridClickedEventHandler(Robot robotInfo, TileData tile, Vector2I gridPosition, Vector2 globalMousePosition, Vector2 localMousePosition);
+
 
     [Signal]
     public delegate void ToggleGridEventHandler();

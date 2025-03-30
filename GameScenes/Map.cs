@@ -7,7 +7,7 @@ public partial class Map : Node2D
 
 	public override void _Ready()
 	{
-		GD.Print("MAP INIT");
+
 
         SignalBus _signalBus = GetNode<SignalBus>("/root/SignalBus");
         string levelPath = _signalBus.LevelPath;
@@ -20,6 +20,7 @@ public partial class Map : Node2D
             {
 
                 Node levelInstance = levelScene.Instantiate();
+
 
                 AddChild(levelInstance);
 
