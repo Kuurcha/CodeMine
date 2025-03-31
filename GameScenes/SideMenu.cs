@@ -6,6 +6,7 @@ using System.Collections.Generic;
 
 public partial class SideMenu : Control
 {
+    public List<Control> uiItems = new List<Control>();
     private TextEdit _codeInput;
     private Control _menuPanel;
     private Button _launchButton;
@@ -13,16 +14,17 @@ public partial class SideMenu : Control
     private SignalBus _signalBus;
     private Queue<string> commandQueue = new Queue<string>();
     private GenericLevel currentLevel;
-
     [Export] 
     private float GameSpeed = 1.0f;
     public override void _Ready()
     {
         _signalBus = GetNode<SignalBus>("/root/SignalBus");
         var playButton = GetNode<TextureButton>("PlayButton"); 
+        
         if (playButton != null)
         {
             playButton.Connect("pressed", Callable.From(OnPlayPressed));
+            uiItems.Add(playButton);
         }
         else
         {
@@ -34,9 +36,10 @@ public partial class SideMenu : Control
         if (restartSimulation != null)
         {
             restartSimulation.Connect("pressed", Callable.From(OnResetPressed));
+            uiItems.Add(restartSimulation);
         }
         else
-        {
+        {   
             GD.PrintErr("RestartSimulation not found!");
             return;
         }
@@ -46,7 +49,7 @@ public partial class SideMenu : Control
         if (hideGridButton != null)
         {
             hideGridButton.Connect("pressed", Callable.From(OnHidePressed));
-            
+            uiItems.Add(hideGridButton);
         }
         else
         {
@@ -54,7 +57,6 @@ public partial class SideMenu : Control
             return;
         }
 
-        
 
 
 
@@ -70,8 +72,8 @@ public partial class SideMenu : Control
             Modulate = new Color(0.5f, 0.5f, 0.5f, 0.9f) 
         };
         AddChild(_menuPanel);
-
-        // Create a container for the menu      
+        uiItems.Add(_menuPanel);
+       
         var panel = new Panel
         {
             Size = new Vector2(367, 600),
@@ -126,7 +128,11 @@ public partial class SideMenu : Control
         panel.AddChild(_launchButton);
     }
 
-
+    private void testHideThis()
+    {
+        GD.Print("Test hiding!");
+        this.Hide();
+    }
     private void OnLaunchPressed()
     {
         string code = _codeInput.Text;
@@ -151,11 +157,11 @@ public partial class SideMenu : Control
 
     }
 
-    private void OnResetPressed()
+    private async void OnResetPressed()
     {
         if (_signalBus.CurrentLevel != null)
         {
-            _signalBus.CurrentLevel.ResetLevel();
+            await _signalBus.CurrentLevel.ResetLevel();
         }
         else
         {

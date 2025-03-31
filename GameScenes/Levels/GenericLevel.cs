@@ -1,5 +1,6 @@
 ﻿using Godot;
 using NewGameProject.Assets.Shared;
+using NewGameProject.Helper;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace NewGameProject.GameScenes.Levels
         protected TileMapLayer _wallMap;
         protected SignalBus _signalBus;
         private GenericLevelUI _genericLevelUI;
+        private SideMenu _sideMenu;
 
         private Robot GetRobotOnTile(Vector2I gridPos)
         {
@@ -36,10 +38,12 @@ namespace NewGameProject.GameScenes.Levels
 
         public override void _Ready()
         {
-
+            _floorMap = GetNode<TileMapLayer>("Map/FloorMap");
+            _wallMap = GetNode<TileMapLayer>("Map/WallMap");
             _signalBus = GetNode<SignalBus>("/root/SignalBus");
             _signalBus.LevelOrigin = GlobalPosition;
-            _genericLevelUI = GetNode<GenericLevelUI>("../LevelUI");
+            _genericLevelUI = GetNode<GenericLevelUI>("LevelUI");
+            _sideMenu = NodeHelper.GetSideMenu(this);
         }
 
         private Vector2 ComputeRealMousePos(Camera2D camera, Vector2 mousePos)
@@ -66,7 +70,21 @@ namespace NewGameProject.GameScenes.Levels
 
                 Vector2 localCoords = this.ToLocal(worldMousePos);
 
+                ICollection<Control> UiElements = _sideMenu.uiItems;
+
                 
+                foreach (Control uiElement in UiElements)
+                {
+/*                    var name = uiElement.Name;
+                    var globalCoords = uiElement.GetGlobalRect();
+                    var localCoordsSideMenu = uiElement.GetRect();*/
+                    if (uiElement.GetGlobalRect().HasPoint(worldMousePos))
+                    {
+                        GD.Print("Click inside global ui - ignoring input");
+                        return;
+                    }
+                }
+
                 if (panel.Visible && panel.GetRect().HasPoint(localCoords))
                 {
                     GD.Print("Click inside panel - Ignoring input");
@@ -116,6 +134,6 @@ namespace NewGameProject.GameScenes.Levels
         {
             return ToLocal(position);
         }
-        public abstract void ResetLevel();
+        public abstract Task ResetLevel();
     }
 }

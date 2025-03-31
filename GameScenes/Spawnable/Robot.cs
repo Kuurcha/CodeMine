@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using static Godot.TextServer;
 
 public partial class Robot : CharacterBody2D
-{
+{   
 
     private SignalBus _signalBus;
     private Vector2I _targetPosition = Vector2I.Zero;
@@ -13,6 +13,7 @@ public partial class Robot : CharacterBody2D
     private bool _isMoving = false;
     private AnimatedSprite2D _sprite;
     private TileDetector _tileDetector;
+    public bool isActive = true;
     public int tileSize { get; set; } = 16;
         
     [Export]
@@ -39,53 +40,60 @@ public partial class Robot : CharacterBody2D
         }
         else
         {
-            _signalBus.SimulationStarted += async (code) => await ProcessInput(code);
+            _signalBus.SimulationStarted += OnSimulationStarted;
         }
-
-
+   
         Position = GridPosition * tileSize; 
 
     }
-
+    private async void OnSimulationStarted(string code)
+    {
+        await ProcessInput(code);
+    }
     public async Task ProcessInput(string code)
     {
-        GD.Print($"Processing: {code}");
-
-
-        string[] parts = code.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-        if (parts.Length != 2) return;
-
-        string direction = parts[0].ToLower();
-        if (!int.TryParse(parts[1], out int steps)) return; 
-
-        Vector2I moveDirection = Vector2I.Zero;
-        
-
-        switch (direction)
+        if (isActive)
         {
-            case "left":
-                moveDirection = new Vector2I(-1, 0);
-                _sprite.Play("move_left");
-                break;
-            case "right":
-                moveDirection = new Vector2I(1, 0);
-                _sprite.Play("move_right");
-                break;
-            case "up":
-                moveDirection = new Vector2I(0, -1);
-                _sprite.Play("move_up");
-                break;
-            case "down":
-                moveDirection = new Vector2I(0, 1);
-                _sprite.Play("move_down");
-                break;
-            default:
-                return;
+            GD.Print($"Processing: {code}");
+
+            string[] parts = code.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length < 3 || parts[0] != "Move") return;
+
+            string targetId = parts[1];
+            if (targetId != Id) return;
+
+            string direction = parts[2].ToLower();
+            if (!int.TryParse(parts[3], out int steps)) return;
+
+            Vector2I moveDirection = Vector2I.Zero;
+
+
+            switch (direction)
+            {
+                case "left":
+                    moveDirection = new Vector2I(-1, 0);
+                    _sprite.Play("move_left");
+                    break;
+                case "right":
+                    moveDirection = new Vector2I(1, 0);
+                    _sprite.Play("move_right");
+                    break;
+                case "up":
+                    moveDirection = new Vector2I(0, -1);
+                    _sprite.Play("move_up");
+                    break;
+                case "down":
+                    moveDirection = new Vector2I(0, 1);
+                    _sprite.Play("move_down");
+                    break;
+                default:
+                    return;
+            }
+
+            LastDirection = direction;
+
+            await MoveStepByStep(moveDirection, steps);
         }
-
-        LastDirection = direction;
-
-        await MoveStepByStep(moveDirection, steps);
     }
 
     public void playIdleAnimation()
@@ -139,7 +147,8 @@ public partial class Robot : CharacterBody2D
     {
         if (_signalBus != null)
         {
-            _signalBus.SimulationStarted -= async (code) => await ProcessInput(code);
+            _signalBus.SimulationStarted -= OnSimulationStarted;
+            _tileDetector.QueueFree();
         }
         GD.Print("Robot unsubscribed from events and removed from the scene.");
     }
@@ -172,4 +181,5 @@ public partial class Robot : CharacterBody2D
         //MoveAndSlide();
 
     }*/
+    
 }

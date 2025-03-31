@@ -118,6 +118,7 @@ texture = ExtResource("2_g4ccv")
 15:6/0 = 0
 0:7/0 = 0
 0:7/0/custom_data_1 = true
+0:7/0/custom_data_2 = "Rock3"
 1:7/0 = 0
 1:7/0/custom_data_1 = true
 2:7/0 = 0
@@ -158,14 +159,18 @@ texture = ExtResource("2_g4ccv")
 15:8/0 = 0
 0:9/0 = 0
 0:9/0/custom_data_1 = true
+0:9/0/custom_data_2 = "Terain1"
 1:9/0 = 0
 1:9/0/custom_data_1 = true
+1:9/0/custom_data_2 = "Terain2"
 2:9/0 = 0
 3:9/0 = 0
 3:9/0/custom_data_0 = true
 3:9/0/custom_data_1 = true
+3:9/0/custom_data_2 = "Rock1"
 4:9/0 = 0
 4:9/0/custom_data_1 = true
+4:9/0/custom_data_2 = "Rock2"
 6:9/0 = 0
 7:9/0 = 0
 8:9/0 = 0
@@ -177,8 +182,10 @@ texture = ExtResource("2_g4ccv")
 14:9/0 = 0
 0:10/0 = 0
 0:10/0/custom_data_1 = true
+0:10/0/custom_data_2 = "Terain2"
 1:10/0 = 0
 1:10/0/custom_data_1 = true
+1:10/0/custom_data_2 = "Terain2"
 6:10/0 = 0
 7:10/0 = 0
 8:10/0 = 0
@@ -321,6 +328,7 @@ texture = ExtResource("2_g4ccv")
 14:4/0 = 0
 2:10/0 = 0
 2:10/0/custom_data_0 = true
+2:10/0/custom_data_2 = "Gold"
 
 [sub_resource type="TileSet" id="TileSet_po455"]
 tile_layout = 5
@@ -335,9 +343,9 @@ custom_data_layer_2/type = 4
 sources/1 = SubResource("TileSetAtlasSource_b3s7k")
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_vw5ff")
 
 [node name="Map" type="Node2D" parent="."]
-script = ExtResource("1_vw5ff")
 
 [node name="FloorMap" type="TileMapLayer" parent="Map"]
 z_index = 1

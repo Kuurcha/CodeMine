@@ -9,8 +9,8 @@ using System;
         private int tileSize = 16;
         public override void _Ready()
         {
-            _floorMap = NodeHelper.FindNode<TileMapLayer>(this, "FloorMap");
-            _wallMap = NodeHelper.FindNode<TileMapLayer>(this, "WallMap");
+            _floorMap = GetNode<TileMapLayer>("../../Map/FloorMap");
+            _wallMap = GetNode<TileMapLayer>("../../Map/WallMap");    
         }
 
         public void DetectTiles(Vector2 position)

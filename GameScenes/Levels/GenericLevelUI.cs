@@ -11,6 +11,7 @@ public partial class GenericLevelUI : Control
     protected Godot.Label _infoLabel;
     protected Godot.Label _robotInfoLabel;
     protected Godot.Label _tileInfoLabel;
+    protected Godot.Label _coordInfoLabel;
     public override void _Ready()
     {
         var defaultTheme = ResourceLoader.Load<Theme>("res://UI/Themes/TestTheme.tres");
@@ -23,6 +24,7 @@ public partial class GenericLevelUI : Control
         _infoPanel.Size = new Vector2(150, 150);
         _infoPanel.ZIndex = 4000;
         _infoPanel.MouseFilter = Control.MouseFilterEnum.Pass;
+        _infoPanel.Visible = false;
 
         StyleBoxFlat styleBox = new StyleBoxFlat();
         styleBox.BorderWidthLeft = 2;
@@ -68,6 +70,12 @@ public partial class GenericLevelUI : Control
         _tileInfoLabel.AddThemeStyleboxOverride("panel", styleBoxMargin);
         vbox.AddChild(_tileInfoLabel);
 
+        _coordInfoLabel = new Godot.Label();
+        _coordInfoLabel.Text = "Test Label";
+        _coordInfoLabel.Theme = defaultTheme;
+        _coordInfoLabel.AddThemeStyleboxOverride("panel", styleBoxMargin);
+        vbox.AddChild(_coordInfoLabel);
+
         _closeButton = new Button();
         _closeButton.Text = "Close";
         _closeButton.Theme = defaultTheme;
@@ -86,29 +94,17 @@ public partial class GenericLevelUI : Control
     private void OnCloseButtonPressed()
     {
         _infoPanel.Hide();
-        _infoPanel.
-                        
-        _uiContainer.UpdateElement();
+/*        _uiContainer.UpdateElement();*/
     }
 
 
-    private void UpdateUI(string robotInfo, string layerInfo, Vector2I gridPos, Vector2 mousePos)
+    private void UpdateUI(string robotInfo, string layerInfo, string coordData, Vector2I gridPos, Vector2 mousePos)
     {
-
-/*        string infoText = $"Grid Position: {gridPos}\n{robotInfo}\n{layerInfo}";*/
-
-
-        //_infoLabel.Text = infoText;
-
-
-/*        _infoPanel.Visible = true;*/
-
+        _infoPanel.Visible = true;
         _infoPanel.Position = mousePos;
         _tileInfoLabel.Text = layerInfo;
         _robotInfoLabel.Text = robotInfo;
-        
-/*        _infoLabel.QueueRedraw();
-        _infoPanel.QueueRedraw();*/
+        _coordInfoLabel.Text = coordData;
     }
 
 
@@ -116,11 +112,13 @@ public partial class GenericLevelUI : Control
     {
         _infoPanel.Visible = true;
 
-        string robotInfo = robotOnTile != null ? $"Robot: {robotOnTile.Name}" : "No robot on this tile.";
+        string robotInfo = robotOnTile != null ? $"Robot: {robotOnTile.Id}" : "No robot on this tile.";
         bool breakable = selectedTile != null ?selectedTile.GetCustomData("Breakable").AsBool(): false;
-
+        string tileType = selectedTile != null ? selectedTile.GetCustomData("Mineral_type").AsString(): "";
         string tileData = breakable ? "Tile is breakable" : "Tile is not breakable";
-        UpdateUI(robotInfo, tileData, gridPos, localMousePosition);
+        tileData += tileType == "" ? "\n No tile type specified:" : $"\n {tileType}";
+        string coordData = gridPos != null ? $"Coordinates  {gridPos.X}, {gridPos.Y}" : "Invalid coordinates data";
+        UpdateUI(robotInfo, tileData, coordData, gridPos, localMousePosition);
     }
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
