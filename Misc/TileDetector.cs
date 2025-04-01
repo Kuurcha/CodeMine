@@ -6,7 +6,12 @@ using System;
     {
         private TileMapLayer _wallMap;
         private TileMapLayer _floorMap;
+        
+        [Export]
+        public string RobotInternalId { get; set; } = "";
+        
         private int tileSize = 16;
+    
         public override void _Ready()
         {
             _floorMap = GetNode<TileMapLayer>("../../Map/FloorMap");
@@ -39,8 +44,22 @@ using System;
         }
     public bool IsNextTileWalkable(Vector2I position, Vector2I direction)
     {
-
         Vector2I positionCalc = position * tileSize + direction * tileSize;
+        try
+        {
+            Vector2I floorTilePosition1 = _floorMap.LocalToMap(positionCalc);
+            Vector2I wallTilePosition1 = _wallMap.LocalToMap(positionCalc);
+        }
+        catch (ObjectDisposedException ex)
+        {
+            throw new ObjectDisposedException(
+                $"{nameof(_floorMap)} for Robot ID {RobotInternalId} has been disposed.",
+                ex
+            );
+        }
+
+
+
         Vector2I floorTilePosition = _floorMap.LocalToMap(positionCalc);
         Vector2I wallTilePosition = _wallMap.LocalToMap(positionCalc);
 

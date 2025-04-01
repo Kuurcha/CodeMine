@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dw28qpyqcork0"]
+[gd_scene load_steps=10 format=3 uid="uid://dw28qpyqcork0"]
 
 [ext_resource type="Script" path="res://GameScenes/MapLogic.cs" id="1_ysuyk"]
 [ext_resource type="Script" path="res://GameScenes/Map.cs" id="2_50xyx"]
 [ext_resource type="Script" path="res://GameScenes/SideMenu.cs" id="6_fbptf"]
 [ext_resource type="Texture2D" uid="uid://d08i6x8jdlxgs" path="res://art/icons/OrangeIcons/Play_3.png" id="8_a723b"]
+[ext_resource type="Texture2D" uid="uid://cvnnlue5ct21v" path="res://art/icons/OrangeIcons/HideGrid_1.png" id="8_css0w"]
+[ext_resource type="Texture2D" uid="uid://dj5wdpj5wap5m" path="res://art/icons/OrangeIcons/HideGrid_2.png" id="9_7hn4p"]
 [ext_resource type="Texture2D" uid="uid://df27eicwmkh2l" path="res://art/icons/OrangeIcons/Play_1.png" id="9_wtt10"]
 [ext_resource type="Texture2D" uid="uid://ct2jvd7ur5dq3" path="res://art/icons/OrangeIcons/Restart_1.png" id="12_01iud"]
 [ext_resource type="Texture2D" uid="uid://b2hmoxoyuafdf" path="res://art/icons/OrangeIcons/Restart_3.png" id="13_ckvi0"]
@@ -62,13 +64,13 @@ metadata/_edit_use_anchors_ = true
 z_index = 4096
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.0885559
-anchor_right = -0.0885559
+anchor_left = -0.0926431
+anchor_right = -0.0926431
 offset_left = 686.0
 offset_top = 450.0
 offset_right = 718.0
 offset_bottom = 482.0
-texture_normal = ExtResource("12_01iud")
-texture_pressed = ExtResource("13_ckvi0")
+texture_normal = ExtResource("8_css0w")
+texture_pressed = ExtResource("9_7hn4p")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true

@@ -3,6 +3,7 @@ using NewGameProject.GameScenes.Levels;
 using NewGameProject.Helper;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 public partial class SideMenu : Control
 {
@@ -14,6 +15,7 @@ public partial class SideMenu : Control
     private SignalBus _signalBus;
     private Queue<string> commandQueue = new Queue<string>();
     private GenericLevel currentLevel;
+    private bool _simulationStarted = false;
     [Export] 
     private float GameSpeed = 1.0f;
     public override void _Ready()
@@ -139,34 +141,52 @@ public partial class SideMenu : Control
         FileHelper.SaveText(code, _path);
     }
 
+
+    private void SimulationEnded()
+    {
+        _simulationStarted = false;
+    }
     private async void OnPlayPressed()
     {
-        string executionFile = FileHelper.LoadText(_path);
-        GD.Print("Execution file loaded.");
-
-
-        string[] commands = executionFile.Split('\n');
-        foreach (string command in commands)
+        await Reset();
+        if (!_simulationStarted)
         {
-            _signalBus.EmitSignal(nameof(SignalBus.SimulationStarted), command);
+            _simulationStarted = true;
+            string executionFile = FileHelper.LoadText(_path);
+            GD.Print("Execution file loaded.");
 
-            float delay = 1.0f / GameSpeed;
-            await ToSignal(GetTree().CreateTimer(delay), "timeout");
+
+            string[] commands = executionFile.Split('\n');
+            foreach (string command in commands)
+            {
+                _signalBus.EmitSignal(nameof(SignalBus.SimulationStarted), command);
+
+                float delay = 1.0f / GameSpeed;
+                await ToSignal(GetTree().CreateTimer(delay), "timeout");
+            }
+
+
         }
-
 
     }
 
-    private async void OnResetPressed()
+    private async Task Reset()
     {
         if (_signalBus.CurrentLevel != null)
         {
+            _signalBus.EmitSignal(nameof(SignalBus.SimulationAborted));
+            SimulationEnded();
             await _signalBus.CurrentLevel.ResetLevel();
         }
         else
         {
             GD.Print("Level not loaded");
         }
+
+    }
+    private async void OnResetPressed()
+    {
+        await Reset();
     }
 
     private void OnHidePressed()

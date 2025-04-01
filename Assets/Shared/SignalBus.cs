@@ -18,6 +18,13 @@ public partial class SignalBus : Node
     public delegate void SimulationStartedEventHandler(string code);
 
     [Signal]
+    public delegate void SimulationEndedEventHandler();
+
+    [Signal]
+    public delegate void SimulationAbortedEventHandler();
+
+
+    [Signal]
     public delegate void GridClickedEventHandler(Robot robotInfo, TileData tile, Vector2I gridPosition, Vector2 globalMousePosition, Vector2 localMousePosition);
 
 

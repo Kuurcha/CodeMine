@@ -21,17 +21,23 @@ public partial class Robot : CharacterBody2D
 
     [Export]
     public string Id { get; set; } = "";
+
+    [Export]
+    public string InternalId { get; set; } = "";
+
     [Export]
     public string[] Commands = new string[0];
     [Export]
     public string LastDirection = "down";
 
+    public bool _simulationAborted = false;
 
     public override void _Ready()
     {
         GD.Print("LOADED ROBOT");
         _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
         _tileDetector = GetNode<TileDetector>("TileDetector");
+        _tileDetector.RobotInternalId = InternalId;
         _signalBus = GetNode<SignalBus>("/root/SignalBus");
 
         if (_signalBus == null)
@@ -41,10 +47,16 @@ public partial class Robot : CharacterBody2D
         else
         {
             _signalBus.SimulationStarted += OnSimulationStarted;
+            _signalBus.SimulationAborted += OnSimulationAborted;
         }
    
         Position = GridPosition * tileSize; 
 
+    }
+
+    private void OnSimulationAborted()
+    {
+        _simulationAborted = true;
     }
     private async void OnSimulationStarted(string code)
     {
@@ -54,6 +66,7 @@ public partial class Robot : CharacterBody2D
     {
         if (isActive)
         {
+            _simulationAborted = false;
             GD.Print($"Processing: {code}");
 
             string[] parts = code.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -92,7 +105,12 @@ public partial class Robot : CharacterBody2D
 
             LastDirection = direction;
 
+            if (_simulationAborted)
+                return;
+
             await MoveStepByStep(moveDirection, steps);
+            _signalBus.EmitSignal(nameof(SignalBus.SimulationEnded));
+
         }
     }
 

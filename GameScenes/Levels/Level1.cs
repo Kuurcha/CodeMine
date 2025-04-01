@@ -14,6 +14,8 @@ public partial class Level1 : GenericLevel
 
         private TileMapLayer _initialFloorMap;
         private TileMapLayer _initialWallMap;
+        private int counter = 0;
+
         public override void _Ready()
         {
 
@@ -30,22 +32,12 @@ public partial class Level1 : GenericLevel
             _initialWallMap = _wallMap.Duplicate() as TileMapLayer;
             _camera = GetTree().CurrentScene.GetNode<Camera2D>("Camera2D");
 
-            _robots = RobotFactory.CreateRobotsForLevel(this, _initialRobotConfigs);
+            _robots = RobotFactory.CreateRobotsForLevel(this, _initialRobotConfigs, counter);
             base._Ready();
 
         }
         
-        private void ReplaceTileMapLayer(TileMapLayer oldLayer, TileMapLayer newLayer)
-        {
-            Node parent = oldLayer.GetParent();
-            if (parent != null)
-            {
-                int index = oldLayer.GetIndex();
-                oldLayer.QueueFree(); 
-                parent.AddChild(newLayer);
-                parent.MoveChild(newLayer, index); 
-            }
-        }
+
 
 
     public override void _Process(double delta)
@@ -56,15 +48,16 @@ public partial class Level1 : GenericLevel
         public async override Task ResetLevel()
         {
 
+            counter++;
             foreach (Robot robot in _robots)
             {
-                robot.QueueFree();
+                robot.Free();
             }
              await ToSignal(GetTree(), "process_frame");
             _robots.Clear();
 
-            ReplaceTileMapLayer(_floorMap, _initialFloorMap);
-            ReplaceTileMapLayer(_wallMap, _initialWallMap);
-            _robots = RobotFactory.CreateRobotsForLevel(this, _initialRobotConfigs);
+            _floorMap = _initialFloorMap;
+            _wallMap = _initialWallMap;
+            _robots = RobotFactory.CreateRobotsForLevel(this, _initialRobotConfigs, counter);
         }
 }
