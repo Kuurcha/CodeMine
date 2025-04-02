@@ -3,28 +3,12 @@
   "WorkspaceRootPath": "C:\\Diploma\\TestCommands\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\genericlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\genericlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\gridoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\gridoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,8 +19,40 @@
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\genericlevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\gridoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\gridoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\mapgridclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\mapgridclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\misc\\factory\\robotfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\factory\\robotfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -51,18 +67,10 @@
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\genericcopier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\misc\\factory\\robotfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\factory\\robotfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\mapgridclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\mapgridclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\otheruielements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -80,16 +88,8 @@
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\nodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\735f9100df956fbae0a13fde8ff6c4f4b3ae4162580a35ccd8387dff4201883a\\Callable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -112,11 +112,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "Map.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Map.cs",
               "RelativeDocumentMoniker": "GameScenes\\Map.cs",
@@ -129,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 10,
               "Title": "SideMenu.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\SideMenu.cs",
               "RelativeDocumentMoniker": "GameScenes\\SideMenu.cs",
@@ -139,19 +139,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T14:30:45.79Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FileHelper.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\FileHelper.cs",
-              "RelativeDocumentMoniker": "Helper\\FileHelper.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\FileHelper.cs",
-              "RelativeToolTip": "Helper\\FileHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:55:48.888Z",
               "EditorCaption": ""
             },
             {
@@ -168,180 +155,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GenericLevel.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevel.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevel.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevel.cs",
-              "RelativeToolTip": "GameScenes\\Levels\\GenericLevel.cs",
-              "ViewState": "AQIAAGIAAAAAAAAAAAASwG8AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:57:28.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Robot.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Spawnable\\Robot.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Spawnable\\Robot.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Spawnable\\Robot.cs",
-              "RelativeToolTip": "GameScenes\\Spawnable\\Robot.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAhwG8AAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T16:12:58.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SignalBus.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
-              "RelativeDocumentMoniker": "Assets\\Shared\\SignalBus.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
-              "RelativeToolTip": "Assets\\Shared\\SignalBus.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAEwCMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T14:26:18.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MapTest.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapTest.cs",
-              "RelativeDocumentMoniker": "GameScenes\\MapTest.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapTest.cs",
-              "RelativeToolTip": "GameScenes\\MapTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:51:28.443Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Level1.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\Level1.cs",
               "RelativeDocumentMoniker": "GameScenes\\Levels\\Level1.cs",
               "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\Level1.cs",
               "RelativeToolTip": "GameScenes\\Levels\\Level1.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAAADkAAAAAAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwCIAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T12:22:56.826Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GenericLevelUI.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevelUI.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevelUI.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevelUI.cs",
-              "RelativeToolTip": "GameScenes\\Levels\\GenericLevelUI.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-01T15:48:01.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "GridOverlay.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GridOverlay.cs",
               "RelativeDocumentMoniker": "GameScenes\\Levels\\GridOverlay.cs",
               "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GridOverlay.cs",
               "RelativeToolTip": "GameScenes\\Levels\\GridOverlay.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-26T12:54:51.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MapLogic.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
-              "RelativeDocumentMoniker": "GameScenes\\MapLogic.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
-              "RelativeToolTip": "GameScenes\\MapLogic.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAASwA0AAAAQAAAA",
+              "DocumentIndex": 3,
+              "Title": "GenericLevelUI.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevelUI.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevelUI.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevelUI.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\GenericLevelUI.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAQwGQAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T16:31:32.388Z",
+              "WhenOpened": "2025-04-01T15:48:01.84Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "GenericCopier.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\GenericCopier.cs",
-              "RelativeDocumentMoniker": "Misc\\GenericCopier.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\GenericCopier.cs",
-              "RelativeToolTip": "Misc\\GenericCopier.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "DocumentIndex": 0,
+              "Title": "GenericLevel.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevel.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevel.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevel.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\GenericLevel.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAnwCgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T17:48:34.155Z",
+              "WhenOpened": "2025-03-25T14:57:28.546Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "TileDetector.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
-              "RelativeDocumentMoniker": "Misc\\TileDetector.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
-              "RelativeToolTip": "Misc\\TileDetector.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAcwDEAAAAMAAAA",
+              "DocumentIndex": 2,
+              "Title": "SignalBus.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
+              "RelativeDocumentMoniker": "Assets\\Shared\\SignalBus.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
+              "RelativeToolTip": "Assets\\Shared\\SignalBus.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAjwCYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T16:13:13.226Z",
+              "WhenOpened": "2025-03-25T14:26:18.491Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RobotFactory.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\Factory\\RobotFactory.cs",
-              "RelativeDocumentMoniker": "Misc\\Factory\\RobotFactory.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\Factory\\RobotFactory.cs",
-              "RelativeToolTip": "Misc\\Factory\\RobotFactory.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAcwB4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T18:21:50.007Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "TileMapLayer.cs",
-              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
-              "RelativeDocumentMoniker": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
-              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
-              "RelativeToolTip": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
-              "ViewState": "AQIAAAICAAAAAAAAAAApwAwCAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T18:05:23.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Node.cs",
-              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
-              "RelativeDocumentMoniker": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
-              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
-              "RelativeToolTip": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
-              "ViewState": "AQIAAEoJAAAAAAAAAADgv2AJAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T13:05:26.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 5,
               "Title": "MapGridClick.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\MapGridClick.cs",
               "RelativeDocumentMoniker": "GameScenes\\Levels\\MapGridClick.cs",
@@ -354,57 +233,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OtherUiElements.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\OtherUiElements.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Levels\\OtherUiElements.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\OtherUiElements.cs",
-              "RelativeToolTip": "GameScenes\\Levels\\OtherUiElements.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T19:16:45.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "MapInfo.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\MapInfo.cs",
-              "RelativeDocumentMoniker": "Assets\\Shared\\MapInfo.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\MapInfo.cs",
-              "RelativeToolTip": "Assets\\Shared\\MapInfo.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T13:25:46.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "CSharpInstanceBridge.cs",
-              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs",
-              "RelativeDocumentMoniker": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs",
-              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs [Read Only]",
-              "RelativeToolTip": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs [Read Only]",
-              "ViewState": "AQIAABMAAAAAAAAAAAAiwB0AAAACAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-30T12:51:31.018Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "NodeHelper.cs",
-              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\NodeHelper.cs",
-              "RelativeDocumentMoniker": "Helper\\NodeHelper.cs",
-              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\NodeHelper.cs",
-              "RelativeToolTip": "Helper\\NodeHelper.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAcwE8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T15:00:50.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 6,
               "Title": "GameNode.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\GameNode.cs",
               "RelativeDocumentMoniker": "GameScenes\\GameNode.cs",
@@ -417,15 +246,175 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 7,
               "Title": "Camera2d.cs",
               "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Camera2d.cs",
               "RelativeDocumentMoniker": "GameScenes\\Camera2d.cs",
               "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Camera2d.cs",
               "RelativeToolTip": "GameScenes\\Camera2d.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAA8wAYAAAAAAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAmwAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T13:57:52.218Z"
+              "WhenOpened": "2025-03-27T13:57:52.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "RobotFactory.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\Factory\\RobotFactory.cs",
+              "RelativeDocumentMoniker": "Misc\\Factory\\RobotFactory.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\Factory\\RobotFactory.cs",
+              "RelativeToolTip": "Misc\\Factory\\RobotFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:21:50.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Robot.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Spawnable\\Robot.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Spawnable\\Robot.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Spawnable\\Robot.cs",
+              "RelativeToolTip": "GameScenes\\Spawnable\\Robot.cs",
+              "ViewState": "AQIAACgAAAAAAAAAAAAEwG8AAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T16:12:58.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MapTest.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapTest.cs",
+              "RelativeDocumentMoniker": "GameScenes\\MapTest.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapTest.cs",
+              "RelativeToolTip": "GameScenes\\MapTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T13:51:28.443Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "FileHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\FileHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\FileHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\FileHelper.cs",
+              "RelativeToolTip": "Helper\\FileHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T15:55:48.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "MapLogic.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
+              "RelativeDocumentMoniker": "GameScenes\\MapLogic.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
+              "RelativeToolTip": "GameScenes\\MapLogic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAASwA0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T16:31:32.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "GenericCopier.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\GenericCopier.cs",
+              "RelativeDocumentMoniker": "Misc\\GenericCopier.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\GenericCopier.cs",
+              "RelativeToolTip": "Misc\\GenericCopier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T17:48:34.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TileDetector.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
+              "RelativeDocumentMoniker": "Misc\\TileDetector.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
+              "RelativeToolTip": "Misc\\TileDetector.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAcwDEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T16:13:13.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TileMapLayer.cs",
+              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
+              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
+              "RelativeToolTip": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\3d4c0c1f218257a7b8180f6681e684e13c870a298d0dda817095f1bbfabdbc84\\TileMapLayer.cs",
+              "ViewState": "AQIAAAICAAAAAAAAAAApwAwCAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:05:23.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Node.cs",
+              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
+              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
+              "RelativeToolTip": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\0bb1b7001f3c7411227a09d2e09f965d857ff30e7701557650c4f513e427d77c\\Node.cs",
+              "ViewState": "AQIAAEoJAAAAAAAAAADgv2AJAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T13:05:26.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OtherUiElements.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\OtherUiElements.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\OtherUiElements.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\OtherUiElements.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\OtherUiElements.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T19:16:45.522Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MapInfo.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\MapInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Shared\\MapInfo.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\MapInfo.cs",
+              "RelativeToolTip": "Assets\\Shared\\MapInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T13:25:46.018Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CSharpInstanceBridge.cs",
+              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs",
+              "RelativeDocumentMoniker": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs",
+              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs [Read Only]",
+              "RelativeToolTip": "..\\..\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs [Read Only]",
+              "ViewState": "AQIAABMAAAAAAAAAAAAiwB0AAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-30T12:51:31.018Z",
+              "EditorCaption": " [Read Only]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "NodeHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\NodeHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\NodeHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\NodeHelper.cs",
+              "RelativeToolTip": "Helper\\NodeHelper.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAcwE8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T15:00:50.681Z"
             },
             {
               "$type": "Document",
@@ -474,6 +463,10 @@
               "ViewState": "AQIAAAgCAAAAAAAAAAASwBcCAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T14:42:56.689Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

@@ -35,7 +35,17 @@ namespace NewGameProject.GameScenes.Levels
             return null;
         }
 
-
+        int FloorToMultipleOf(int value, int multiple)
+        {
+            if (value >= 0)
+            {
+                return (value / multiple) * multiple;
+            }
+            else
+            {
+                return ((value - (multiple - 1)) / multiple) * multiple;  
+            }
+        }
         public override void _Ready()
         {
             _floorMap = GetNode<TileMapLayer>("Map/FloorMap");
@@ -52,6 +62,15 @@ namespace NewGameProject.GameScenes.Levels
             Vector2 screenCenter = new Vector2(screenSize.X / 2, screenSize.Y / 2);
             Vector2 worldMousePos = ((mousePos - screenCenter) / camera.Zoom) + camera.Position;
             return worldMousePos;
+        }
+        Vector2I GetGridPosition(Vector2 localCoords)
+        {
+
+            int gridX = FloorToMultipleOf((int)localCoords.X, SignalBus.TileSize) / SignalBus.TileSize;
+            int gridY = FloorToMultipleOf((int)localCoords.Y, SignalBus.TileSize) / SignalBus.TileSize;
+
+
+            return new Vector2I(gridX, gridY);
         }
         public override void _Input(InputEvent @event)
         {
@@ -92,10 +111,7 @@ namespace NewGameProject.GameScenes.Levels
                 }
 
 
-                Vector2I gridPos = new Vector2I(
-                    (int)(localCoords.X / SignalBus.TileSize),
-                    (int)(localCoords.Y / SignalBus.TileSize)
-                );
+                Vector2I gridPos = GetGridPosition(localCoords);
 
                 if (gridPos.X >= MapInfo.MinX && gridPos.X <= MapInfo.MaxX &&
                     gridPos.Y >= MapInfo.MinY && gridPos.Y <= MapInfo.MaxY)
