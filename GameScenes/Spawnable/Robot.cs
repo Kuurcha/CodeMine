@@ -1,5 +1,11 @@
     using Godot;
+using NewGameProject.GameScenes.Spawnable.Parsing;
+using NewGameProject.Helper;
+using Pliant.Grammars;
+using Pliant.Runtime;
+using Pliant.Tree;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using static Godot.TextServer;
 
@@ -62,55 +68,86 @@ public partial class Robot : CharacterBody2D
     {
         await ProcessInput(code);
     }
+
+    public static void TraverseTree(ITreeNode node, int depth = 0)
+    {
+        string indent = new string(' ', depth * 2);
+        string info = $"[{node.NodeType}] Origin={node.Origin}, Location={node.Location}";
+
+
+        if (node is InternalTreeNode internalNode)
+        {
+            GD.Print($"{indent}NonTerminal. Value: {internalNode.Symbol.Value},  Type: {internalNode.Symbol.SymbolType} - {info}");
+
+          
+
+            foreach (var child in internalNode.Children)
+            {
+   
+                TraverseTree(child, depth + 1);
+            }
+        }
+        else if (node is TokenTreeNode tokenNode)
+        {
+            GD.Print($"{indent}Terminal: Value: {tokenNode.Token.Capture} TokenType: {tokenNode.Token.Capture} - {info}");
+        }
+        else
+        {
+            GD.Print($"{indent}Unknown node type - {info}");
+        }
+    }
     public async Task ProcessInput(string code)
     {
         if (isActive)
         {
             _simulationAborted = false;
-            GD.Print($"Processing: {code}");
-
-            string[] parts = code.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-            if (parts.Length < 3 || parts[0] != "Move") return;
-
-            string targetId = parts[1];
-            if (targetId != Id) return;
-
-            string direction = parts[2].ToLower();
-            if (!int.TryParse(parts[3], out int steps)) return;
-
-            Vector2I moveDirection = Vector2I.Zero;
-
-
-            switch (direction)
+            ParseEngine parser = new ParseEngine(this._signalBus.CurrentGrammar);
+            InternalTreeNode tree = ParserHelper.ParseTree(parser, code);
+            if (tree != null)
             {
-                case "left":
-                    moveDirection = new Vector2I(-1, 0);
-                    _sprite.Play("move_left");
-                    break;
-                case "right":
-                    moveDirection = new Vector2I(1, 0);
-                    _sprite.Play("move_right");
-                    break;
-                case "up":
-                    moveDirection = new Vector2I(0, -1);
-                    _sprite.Play("move_up");
-                    break;
-                case "down":
-                    moveDirection = new Vector2I(0, 1);
-                    _sprite.Play("move_down");
-                    break;
-                default:
-                    return;
+                var command = CommandBuilder.BuildCommand(tree);
+                if (command is MoveCommand moveCommand)
+                {
+                    string targetId = moveCommand.Id;
+                    string direction = moveCommand.Direction;
+                    int steps = moveCommand.Steps;
+                    if (targetId == this.Id)
+                    {
+                        Vector2I moveDirection = Vector2I.Zero;
+
+
+                        switch (direction)
+                        {
+                            case "left":
+                                moveDirection = new Vector2I(-1, 0);
+                                _sprite.Play("move_left");
+                                break;
+                            case "right":
+                                moveDirection = new Vector2I(1, 0);
+                                _sprite.Play("move_right");
+                                break;
+                            case "up":
+                                moveDirection = new Vector2I(0, -1);
+                                _sprite.Play("move_up");
+                                break;
+                            case "down":
+                                moveDirection = new Vector2I(0, 1);
+                                _sprite.Play("move_down");
+                                break;
+                            default:
+                                return;
+                        }
+
+                        LastDirection = direction;
+
+                        if (_simulationAborted)
+                            return;
+
+                        await MoveStepByStep(moveDirection, steps);
+                        _signalBus.EmitSignal(nameof(SignalBus.SimulationEnded));
+                    }
+                }
             }
-
-            LastDirection = direction;
-
-            if (_simulationAborted)
-                return;
-
-            await MoveStepByStep(moveDirection, steps);
-            _signalBus.EmitSignal(nameof(SignalBus.SimulationEnded));
-
         }
     }
 

@@ -1,10 +1,14 @@
 using Godot;
 using NewGameProject.GameScenes.Levels;
+using Pliant.Grammars;
+using Pliant.Runtime;
 using System;
 
 public partial class SignalBus : Node
 {
     public string LevelPath { get; set; } = string.Empty;
+
+    public IGrammar CurrentGrammar { get; set; }
     public GenericLevel CurrentLevel { get; set; }
 
     public static int TileSize = 16;

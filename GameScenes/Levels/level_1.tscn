@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=4 uid="uid://dtvblajxes12y"]
 
-[ext_resource type="Script" path="res://GameScenes/Levels/Level1.cs" id="1_vw5ff"]
+[ext_resource type="Script" uid="uid://dktb33j7jk56r" path="res://GameScenes/Levels/Level1.cs" id="1_vw5ff"]
 [ext_resource type="Texture2D" uid="uid://s41yik527keq" path="res://art/2d/Map/cave.png" id="2_g4ccv"]
-[ext_resource type="Script" path="res://GameScenes/Levels/GenericLevelUI.cs" id="3_0l12u"]
-[ext_resource type="Script" path="res://GameScenes/Levels/GridOverlay.cs" id="3_1e3tf"]
+[ext_resource type="Script" uid="uid://c64l347e22v3y" path="res://GameScenes/Levels/GenericLevelUI.cs" id="3_0l12u"]
+[ext_resource type="Script" uid="uid://dna8f7vh6bgup" path="res://GameScenes/Levels/GridOverlay.cs" id="3_1e3tf"]
 [ext_resource type="Theme" uid="uid://b5ybdyc1olnnj" path="res://UI/Themes/TestTheme.tres" id="4_e4dsf"]
-[ext_resource type="Script" path="res://GameScenes/Levels/OtherUiElements.cs" id="5_n1dh6"]
+[ext_resource type="Script" uid="uid://cu3hooc443rbr" path="res://GameScenes/Levels/OtherUiElements.cs" id="5_n1dh6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b3s7k"]
 texture = ExtResource("2_g4ccv")

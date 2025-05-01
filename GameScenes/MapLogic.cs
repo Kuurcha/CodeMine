@@ -1,5 +1,6 @@
 using Godot;
 using Pliant.Forest;
+using Pliant.Grammars;
 using Pliant.Languages.Pdl;
 using Pliant.Runtime;
 using Pliant.Tree;
@@ -24,47 +25,11 @@ public partial class MapLogic : Node2D
         var definition = pdlParser.Parse(content);
 
 
-        var grammar = new PdlGrammarGenerator().Generate(definition);
-        var parser = new ParseEngine(grammar);
+        IGrammar grammar = new PdlGrammarGenerator().Generate(definition);
 
-        var calculatorInput = "5+30 * 2 + 1";
-        var parseRunner = new ParseRunner(parser, calculatorInput);
+        _signalBus.CurrentGrammar = grammar;
 
-
-        
-
-        var recognized = false;
-        var errorPosition = 0;
-        while (!parseRunner.EndOfStream())
-        {
-            recognized = parseRunner.Read();
-            if (!recognized)
-            {
-                errorPosition = parseRunner.Position;
-                break;
-            }
-        }
-
-        // For a parse to be accepted, all parse rules are completed and a trace
-        // has been made back to the parse root.
-        // A parse must be recognized in order for acceptance to have meaning.
-        var accepted = false;
-        if (recognized)
-        {
-            accepted = parseRunner.ParseEngine.IsAccepted();
-            if (!accepted)
-                errorPosition = parseRunner.Position;
-        }
-        Console.WriteLine($"Recognized: {recognized}, Accepted: {accepted}");
-        if (!recognized || !accepted)
-            Console.Error.WriteLine($"Error at position {errorPosition}");
-
-        var parseForestRoot = parser.GetParseForestRootNode();
-
-
-        var parseTree = new InternalTreeNode(
-            parseForestRoot,
-            new SelectFirstChildDisambiguationAlgorithm());
+       
     }
 
     public void ProcessInput(string code)

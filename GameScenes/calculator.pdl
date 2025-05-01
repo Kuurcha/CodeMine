@@ -1,15 +1,19 @@
-Calculator 
-	= Expression;
+Message
+	= Command;
 		
-Expression 
-	= Expression '+' Term
-	| Term;
+Command 
+	= MoveCommand;
 		
-Term 
-	= Term '*' Factor
-	| Factor;
+MoveCommand 
+	= 'Move' Id Direction Steps;
 		
-Factor 
+Id
+	= /[a-zA-Z_][a-zA-Z0-9_]*/ ;
+
+Direction
+	= 'left' | 'right' | 'up' | 'down' | 'Left' | 'Right' | 'Down' | 'Up' ;
+
+Steps
 	= Number ;
 	
 Number 
@@ -18,5 +22,5 @@ Number
 Digits ~ /[0-9]+/ ;
 Whitespace ~ /[\s]+/ ;
 	
-:start = Calculator;
+:start = Message ;
 :ignore = Whitespace;

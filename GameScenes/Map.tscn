@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dw28qpyqcork0"]
 
-[ext_resource type="Script" path="res://GameScenes/MapLogic.cs" id="1_ysuyk"]
-[ext_resource type="Script" path="res://GameScenes/Map.cs" id="2_50xyx"]
-[ext_resource type="Script" path="res://GameScenes/SideMenu.cs" id="6_fbptf"]
+[ext_resource type="Script" uid="uid://cj1kcxipra8ij" path="res://GameScenes/MapLogic.cs" id="1_ysuyk"]
+[ext_resource type="Script" uid="uid://fxi2artd7qwm" path="res://GameScenes/Map.cs" id="2_50xyx"]
+[ext_resource type="Script" uid="uid://dncfbigdyp4ul" path="res://GameScenes/SideMenu.cs" id="6_fbptf"]
 [ext_resource type="Texture2D" uid="uid://d08i6x8jdlxgs" path="res://art/icons/OrangeIcons/Play_3.png" id="8_a723b"]
 [ext_resource type="Texture2D" uid="uid://cvnnlue5ct21v" path="res://art/icons/OrangeIcons/HideGrid_1.png" id="8_css0w"]
 [ext_resource type="Texture2D" uid="uid://dj5wdpj5wap5m" path="res://art/icons/OrangeIcons/HideGrid_2.png" id="9_7hn4p"]

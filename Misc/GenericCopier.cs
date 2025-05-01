@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace NewGameProject.Misc
@@ -12,13 +13,9 @@ namespace NewGameProject.Misc
     {
         public static T DeepCopy(object objectToCopy)
         {
-            using (MemoryStream memoryStream = new MemoryStream())
-            {
-                BinaryFormatter binaryFormatter = new BinaryFormatter();
-                binaryFormatter.Serialize(memoryStream, objectToCopy);
-                memoryStream.Seek(0, SeekOrigin.Begin);
-                return (T)binaryFormatter.Deserialize(memoryStream);
-            }
+            string jsonString = JsonSerializer.Serialize(objectToCopy);
+
+            return JsonSerializer.Deserialize<T>(jsonString);
         }
     }
 }

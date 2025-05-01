@@ -5,8 +5,8 @@
     },
     "Профиль 1": {
       "commandName": "Executable",
-      "executablePath": "C:\\Godot\\Godot_v4.3-stable_mono_win64\\Godot_v4.3-stable_mono_win64.exe",
-      "commandLineArgs": "--path \"C:/Diploma/TestCommands\" --verbose",
+      "executablePath": "F:\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64\\Godot_v4.4.1-stable_mono_win64.exe",
+      "commandLineArgs": "--path \"F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\" --verbose",
       "nativeDebugging": false
     }
   }
