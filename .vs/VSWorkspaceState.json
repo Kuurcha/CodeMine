@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Assets",
+    "\\Assets\\Shared",
+    "\\GameScenes",
+    "\\GameScenes\\Levels",
+    "\\GameScenes\\Spawnable",
+    "\\GameScenes\\Spawnable\\Parsing",
+    "\\Helper",
+    "\\Misc"
+  ],
+  "SelectedNode": "\\GameScenes\\Spawnable\\Robot.cs",
+  "PreviewInSolutionExplorer": false
+}
