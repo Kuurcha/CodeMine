@@ -15,7 +15,7 @@ public partial class SignalBus : Node
     }
 
     [Signal]
-    public delegate void SimulationStartedEventHandler(string code);
+    public delegate void CommandRecievedEventHandler(string code);
 
     [Signal]
     public delegate void SimulationEndedEventHandler();

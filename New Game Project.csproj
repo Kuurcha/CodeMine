@@ -6,4 +6,11 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>NewGameProject</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="gamescenes\calculator.pdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="GSF.Communication" Version="2.4.28" />
+    <PackageReference Include="Pliant" Version="0.11.0" />
+  </ItemGroup>
 </Project>

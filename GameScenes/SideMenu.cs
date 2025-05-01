@@ -159,7 +159,7 @@ public partial class SideMenu : Control
             string[] commands = executionFile.Split('\n');
             foreach (string command in commands)
             {
-                _signalBus.EmitSignal(nameof(SignalBus.SimulationStarted), command);
+                _signalBus.EmitSignal(nameof(SignalBus.CommandRecieved), command);
 
                 float delay = 1.0f / GameSpeed;
                 await ToSignal(GetTree().CreateTimer(delay), "timeout");

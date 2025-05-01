@@ -46,7 +46,7 @@ public partial class Robot : CharacterBody2D
         }
         else
         {
-            _signalBus.SimulationStarted += OnSimulationStarted;
+            _signalBus.CommandRecieved += OnCommandSend;
             _signalBus.SimulationAborted += OnSimulationAborted;
         }
    
@@ -58,7 +58,7 @@ public partial class Robot : CharacterBody2D
     {
         _simulationAborted = true;
     }
-    private async void OnSimulationStarted(string code)
+    private async void OnCommandSend(string code)
     {
         await ProcessInput(code);
     }
@@ -165,7 +165,8 @@ public partial class Robot : CharacterBody2D
     {
         if (_signalBus != null)
         {
-            _signalBus.SimulationStarted -= OnSimulationStarted;
+            _signalBus.CommandRecieved -= OnCommandSend;
+            _signalBus.SimulationAborted -= OnSimulationAborted;
             _tileDetector.QueueFree();
         }
         GD.Print("Robot unsubscribed from events and removed from the scene.");

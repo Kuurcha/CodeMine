@@ -18,6 +18,8 @@ metadata/_edit_horizontal_guides_ = [-54.0]
 position = Vector2(585, 325)
 zoom = Vector2(1.5, 1.5)
 
+[node name="Node2D" type="Node2D" parent="Camera2D"]
+
 [node name="Map" type="Node2D" parent="."]
 position = Vector2(763, 356)
 script = ExtResource("2_50xyx")
@@ -74,3 +76,5 @@ texture_normal = ExtResource("8_css0w")
 texture_pressed = ExtResource("9_7hn4p")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="Node" type="Node" parent="."]
