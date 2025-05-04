@@ -1,5 +1,6 @@
 ﻿using Antlr.Runtime;
 using Godot;
+using NewGameProject.ServerLogic.Parsing.Exceptions;
 using Pliant.Forest;
 using Pliant.Runtime;
 using Pliant.Tree;
@@ -49,17 +50,22 @@ namespace NewGameProject.Helper
            
             try
             {
-                var parseForestRoot = parser.GetParseForestRootNode();
-                var parseTree = new InternalTreeNode(
-                    parseForestRoot,
-                    new SelectFirstChildDisambiguationAlgorithm());
-                return parseTree;
+                if (recognized && accepted)
+                {
+                    var parseForestRoot = parser.GetParseForestRootNode();
+                    var parseTree = new InternalTreeNode(
+                        parseForestRoot,
+                        new SelectFirstChildDisambiguationAlgorithm());
+                    return parseTree;
+                }
+                else
+                {
+                    throw new UnknownCommandException($"Команда неверна: {input}");
+                }
             }
-
             catch(System.NullReferenceException ex)
             {
-                GD.Print("ERROR!");
-
+                throw new UnknownCommandException($"Команда неверна: {input}");
             }
 
 

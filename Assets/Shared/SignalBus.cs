@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using NewGameProject.GameScenes.Levels;
 using Pliant.Grammars;
 using Pliant.Runtime;
@@ -6,8 +7,9 @@ using System;
 
 public partial class SignalBus : Node
 {
-    public string LevelPath { get; set; } = string.Empty;
 
+    public string LevelPath { get; set; } = string.Empty;
+    public SocketClient SocketClient { get; set; }
     public IGrammar CurrentGrammar { get; set; }
     public GenericLevel CurrentLevel { get; set; }
 
@@ -19,7 +21,7 @@ public partial class SignalBus : Node
     }
 
     [Signal]
-    public delegate void CommandRecievedEventHandler(string code);
+    public delegate void ProcessedCommandRecievedEventHandler(Dictionary data);
 
     [Signal]
     public delegate void SimulationEndedEventHandler();
@@ -34,6 +36,9 @@ public partial class SignalBus : Node
 
     [Signal]
     public delegate void ToggleGridEventHandler();
+
+    [Signal]
+    public delegate void SocketCommandRecievedEventHandler(string data);
 
     public void EmitToggleGrid()
     {

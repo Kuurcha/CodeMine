@@ -76,5 +76,3 @@ texture_normal = ExtResource("8_css0w")
 texture_pressed = ExtResource("9_7hn4p")
 stretch_mode = 0
 metadata/_edit_use_anchors_ = true
-
-[node name="Node" type="Node" parent="."]

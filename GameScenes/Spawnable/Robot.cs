@@ -1,6 +1,7 @@
-    using Godot;
-using NewGameProject.GameScenes.Spawnable.Parsing;
+using Godot;
+using Godot.Collections;
 using NewGameProject.Helper;
+using NewGameProject.ServerLogic.Parsing;
 using Pliant.Grammars;
 using Pliant.Runtime;
 using Pliant.Tree;
@@ -38,6 +39,32 @@ public partial class Robot : CharacterBody2D
 
     public bool _simulationAborted = false;
 
+
+    private string ToJson()
+    {
+        var data = new Godot.Collections.Dictionary<string, Variant>
+        {
+            { "id", Id },
+            { "x", GridPosition.X },
+            { "y", GridPosition.Y },
+            { "direction", LastDirection }
+        };
+
+        return Json.Stringify(data);
+    }
+
+    public Godot.Collections.Dictionary<string, Variant> ToJsonDict()
+    {
+        return new Godot.Collections.Dictionary<string, Variant>
+    {
+        { "id", Id },
+        { "internal_id", InternalId },
+        { "x", GridPosition.X },
+        { "y", GridPosition.Y },
+        { "direction", LastDirection }
+    };
+    }
+
     public override void _Ready()
     {
         GD.Print("LOADED ROBOT");
@@ -52,7 +79,7 @@ public partial class Robot : CharacterBody2D
         }
         else
         {
-            _signalBus.CommandRecieved += OnCommandSend;
+            _signalBus.ProcessedCommandRecieved += OnCommandSend;
             _signalBus.SimulationAborted += OnSimulationAborted;
         }
    
@@ -64,89 +91,65 @@ public partial class Robot : CharacterBody2D
     {
         _simulationAborted = true;
     }
-    private async void OnCommandSend(string code)
+
+    private async void OnCommandSend(Dictionary data)
     {
-        await ProcessInput(code);
+        await ProcessInput(data);
     }
 
-    public static void TraverseTree(ITreeNode node, int depth = 0)
-    {
-        string indent = new string(' ', depth * 2);
-        string info = $"[{node.NodeType}] Origin={node.Origin}, Location={node.Location}";
-
-
-        if (node is InternalTreeNode internalNode)
-        {
-            GD.Print($"{indent}NonTerminal. Value: {internalNode.Symbol.Value},  Type: {internalNode.Symbol.SymbolType} - {info}");
-
-          
-
-            foreach (var child in internalNode.Children)
-            {
-   
-                TraverseTree(child, depth + 1);
-            }
-        }
-        else if (node is TokenTreeNode tokenNode)
-        {
-            GD.Print($"{indent}Terminal: Value: {tokenNode.Token.Capture} TokenType: {tokenNode.Token.Capture} - {info}");
-        }
-        else
-        {
-            GD.Print($"{indent}Unknown node type - {info}");
-        }
-    }
-    public async Task ProcessInput(string code)
+    public async Task ProcessInput(Dictionary data)
     {
         if (isActive)
         {
             _simulationAborted = false;
-            ParseEngine parser = new ParseEngine(this._signalBus.CurrentGrammar);
-            InternalTreeNode tree = ParserHelper.ParseTree(parser, code);
-            if (tree != null)
+            ICommand command = CommandFactory.FromDictionary(data);
+            if (command is CheckRobotCommand checkCommand)
             {
-                var command = CommandBuilder.BuildCommand(tree);
-                if (command is MoveCommand moveCommand)
+                string targetId = checkCommand.Id;
+                if (this.Id == targetId)
+                    _signalBus.SocketClient.SendMessage(this.ToJson());
+            }
+            if (command is MoveCommand moveCommand)
+            {
+                string targetId = moveCommand.Id;
+                string direction = moveCommand.Direction;
+                int steps = moveCommand.Steps;
+                if (targetId == this.Id)
                 {
-                    string targetId = moveCommand.Id;
-                    string direction = moveCommand.Direction;
-                    int steps = moveCommand.Steps;
-                    if (targetId == this.Id)
+                    Vector2I moveDirection = Vector2I.Zero;
+
+
+                    switch (direction)
                     {
-                        Vector2I moveDirection = Vector2I.Zero;
-
-
-                        switch (direction)
-                        {
-                            case "left":
-                                moveDirection = new Vector2I(-1, 0);
-                                _sprite.Play("move_left");
-                                break;
-                            case "right":
-                                moveDirection = new Vector2I(1, 0);
-                                _sprite.Play("move_right");
-                                break;
-                            case "up":
-                                moveDirection = new Vector2I(0, -1);
-                                _sprite.Play("move_up");
-                                break;
-                            case "down":
-                                moveDirection = new Vector2I(0, 1);
-                                _sprite.Play("move_down");
-                                break;
-                            default:
-                                return;
-                        }
-
-                        LastDirection = direction;
-
-                        if (_simulationAborted)
+                        case "left":
+                            moveDirection = new Vector2I(-1, 0);
+                            _sprite.Play("move_left");
+                            break;
+                        case "right":
+                            moveDirection = new Vector2I(1, 0);
+                            _sprite.Play("move_right");
+                            break;
+                        case "up":
+                            moveDirection = new Vector2I(0, -1);
+                            _sprite.Play("move_up");
+                            break;
+                        case "down":
+                            moveDirection = new Vector2I(0, 1);
+                            _sprite.Play("move_down");
+                            break;
+                        default:
                             return;
-
-                        await MoveStepByStep(moveDirection, steps);
-                        _signalBus.EmitSignal(nameof(SignalBus.SimulationEnded));
                     }
+
+                    LastDirection = direction;
+
+                    if (_simulationAborted)
+                        return;
+
+                    await MoveStepByStep(moveDirection, steps);
+                    _signalBus.EmitSignal(nameof(SignalBus.SimulationEnded));
                 }
+                
             }
         }
     }
@@ -202,7 +205,7 @@ public partial class Robot : CharacterBody2D
     {
         if (_signalBus != null)
         {
-            _signalBus.CommandRecieved -= OnCommandSend;
+            _signalBus.ProcessedCommandRecieved -= OnCommandSend;
             _signalBus.SimulationAborted -= OnSimulationAborted;
             _tileDetector.QueueFree();
         }

@@ -1,6 +1,9 @@
 ﻿using Godot;
 using NewGameProject.Assets.Shared;
 using NewGameProject.Helper;
+using NewGameProject.ServerLogic.Parsing;
+using Pliant.Runtime;
+using Pliant.Tree;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +24,8 @@ namespace NewGameProject.GameScenes.Levels
         protected SignalBus _signalBus;
         private GenericLevelUI _genericLevelUI;
         private SideMenu _sideMenu;
+
+ 
 
         private Robot GetRobotOnTile(Vector2I gridPos)
         {
@@ -54,6 +59,45 @@ namespace NewGameProject.GameScenes.Levels
             _signalBus.LevelOrigin = GlobalPosition;
             _genericLevelUI = GetNode<GenericLevelUI>("LevelUI");
             _sideMenu = NodeHelper.GetSideMenu(this);
+
+
+            if (_signalBus == null)
+            {
+                GD.Print("BUS IS NULL WTF");
+            }
+            else
+            {
+
+                _signalBus.SocketCommandRecieved += ProcessSocketData;
+            }
+        }
+
+
+        private void ProcessSocketData(string socketData)
+        {
+
+            ParseEngine parser = new ParseEngine(this._signalBus.CurrentGrammar);
+            InternalTreeNode tree = ParserHelper.ParseTree(parser, socketData);
+            if (tree != null)
+            {
+                var command = CommandBuilder.BuildCommand(tree);
+
+                if (command is ListCommand)
+                {
+                    var robotArray = new Godot.Collections.Array<Variant>();
+                    foreach (var robot in _robots)
+                    {
+                        robotArray.Add(robot.ToJsonDict());
+                    }
+                    string json = Json.Stringify(robotArray);
+                    _signalBus.SocketClient.SendMessage(json);
+                }
+                else
+                {
+                    var serializedCommand = command.ToDictionary();
+                    _signalBus.EmitSignal(nameof(SignalBus.ProcessedCommandRecieved), serializedCommand);
+                }
+            }
         }
 
         private Vector2 ComputeRealMousePos(Camera2D camera, Vector2 mousePos)
@@ -151,5 +195,15 @@ namespace NewGameProject.GameScenes.Levels
             return ToLocal(position);
         }
         public abstract Task ResetLevel();
+
+        public override void _ExitTree()
+        {
+            if (_signalBus != null)
+            {
+
+                _signalBus.SocketCommandRecieved -= ProcessSocketData;
+            }
+
+        }
     }
 }

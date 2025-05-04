@@ -44,7 +44,7 @@ public class SocketClient
             {
                 string received = _client.GetUtf8String(_client.GetAvailableBytes());
                 //check if valid command
-                SignalBus.EmitSignal(nameof(SignalBus.CommandRecieved), received);
+                SignalBus.EmitSignal(nameof(SignalBus.SocketCommandRecieved), received);
             }
         }
     }

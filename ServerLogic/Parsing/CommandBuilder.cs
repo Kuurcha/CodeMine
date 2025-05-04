@@ -1,15 +1,12 @@
 ﻿using Pliant.Tree;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using NewGameProject.ServerLogic.Parsing;
 
-namespace NewGameProject.GameScenes.Spawnable.Parsing
+namespace NewGameProject.ServerLogic.Parsing
 {
     public static class CommandBuilder
     {
-        public static ICommand BuildCommand(ITreeNode node)
+        public static NewGameProject.ServerLogic.Parsing.ICommand BuildCommand(ITreeNode node)
         {
             if (node is InternalTreeNode internalNode)
             {
@@ -21,11 +18,42 @@ namespace NewGameProject.GameScenes.Spawnable.Parsing
                     {
                         return ParseMoveCommand(commandTypeNode);
                     }
+                    if (commandTypeNode.Symbol.Value == "CheckCommand")
+                    {
+            
+                        return ParseCheckRobotCommand(commandTypeNode);
+                    }
+                    if (commandTypeNode.Symbol.Value == "ListCommand")
+                    {
+                        return new ListCommand();
+                    }
+
                 }
-          
+
             }
 
             return null;
+        }
+
+        private static CheckRobotCommand ParseCheckRobotCommand(InternalTreeNode node)
+        {
+            var checkCmd = new CheckRobotCommand();
+
+            foreach (var child in node.Children)
+            {
+                if (child is InternalTreeNode internalChild)
+                {
+                    switch (internalChild.Symbol.Value)
+                    {
+                        case "Id":
+                            checkCmd.Id = GetTokenValue(internalChild);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            return checkCmd;
         }
 
         private static MoveCommand ParseMoveCommand(InternalTreeNode moveNode)
@@ -49,6 +77,8 @@ namespace NewGameProject.GameScenes.Spawnable.Parsing
                             if (int.TryParse(stepsStr, out var steps))
                                 moveCmd.Steps = steps;
                             break;
+                        default:
+                            break;
                     }
                 }
             }
@@ -63,7 +93,7 @@ namespace NewGameProject.GameScenes.Spawnable.Parsing
                 if (child is TokenTreeNode token)
                     return token.Token.Capture.ToString();
                 if (child is InternalTreeNode inner)
-                    return GetTokenValue(inner); 
+                    return GetTokenValue(inner);
             }
 
             return string.Empty;

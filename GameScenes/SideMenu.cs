@@ -4,7 +4,7 @@ using NewGameProject.Helper;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-
+using NewGameProject.ServerLogic.Parsing;
 public partial class SideMenu : Control
 {
     public List<Control> uiItems = new List<Control>();
@@ -159,7 +159,7 @@ public partial class SideMenu : Control
             string[] commands = executionFile.Split('\n');
             foreach (string command in commands)
             {
-                _signalBus.EmitSignal(nameof(SignalBus.CommandRecieved), command);
+                _signalBus.EmitSignal(nameof(SignalBus.ProcessedCommandRecieved), command);
 
                 float delay = 1.0f / GameSpeed;
                 await ToSignal(GetTree().CreateTimer(delay), "timeout");

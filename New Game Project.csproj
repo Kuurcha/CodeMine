@@ -14,6 +14,7 @@
     <PackageReference Include="Pliant" Version="0.11.0" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Misc\NewFolder\" />
     <Folder Include="Misc\Parsing\" />
   </ItemGroup>
 </Project>

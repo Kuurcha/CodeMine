@@ -28,6 +28,7 @@ public partial class MapLogic : Node2D
         IGrammar grammar = new PdlGrammarGenerator().Generate(definition);
 
         _signalBus.CurrentGrammar = grammar;
+        _signalBus.SocketClient = _socketClient;
 
        
     }
