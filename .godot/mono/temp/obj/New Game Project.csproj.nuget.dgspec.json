@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj": {}
+  },
+  "projects": {
+    "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
+        "projectName": "New Game Project",
+        "projectPath": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
+        "packagesPath": "C:\\Users\\Mikhail\\.nuget\\packages\\",
+        "outputPath": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\.godot\\mono\\temp\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "F:\\visual studi 2 shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Mikhail\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "all"
+        },
+        "SdkAnalysisLevel": "9.0.100"
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "GSF.Communication": {
+              "target": "Package",
+              "version": "[2.4.28, )"
+            },
+            "Godot.SourceGenerators": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "GodotSharp": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "GodotSharpEditor": {
+              "target": "Package",
+              "version": "[4.4.1, )"
+            },
+            "Pliant": {
+              "target": "Package",
+              "version": "[0.11.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

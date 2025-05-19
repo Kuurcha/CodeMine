@@ -1,5 +1,7 @@
 using Godot;
+using Microsoft.CodeAnalysis.VisualBasic.Syntax;
 using NewGameProject.Helper;
+using NewGameProject.Inventory;
 using System;
 
     public partial class TileDetector : Node2D
@@ -27,22 +29,21 @@ using System;
             {
                 ulong tileId = tile.GetInstanceId();
 
+                bool breakable = tile.GetCustomData("Breakable").AsBool();
+                if (breakable)
+                {
+                    GD.Print("Tile is breakable");
+                }
 
-                    bool breakable = tile.GetCustomData("Breakable").AsBool();
-                    if (breakable)
-                    {
-                        GD.Print("Tile is breakable");
-                    }
-
-                    string type = tile.GetCustomData("Mineral_type").AsString();
-                    if (type != null)
-                    {
-                        GD.Print("Tile has mineral type: " + type);
-                    }
-           
+                string type = tile.GetCustomData("Mineral_type").AsString();
+                if (type != null)
+                {
+                    GD.Print("Tile has mineral type: " + type);
+                }
             }
         }
-    public bool IsNextTileWalkable(Vector2I position, Vector2I direction)
+
+    public TileData GetNextTile(Vector2I position, Vector2I direction)
     {
         Vector2I positionCalc = position * tileSize + direction * tileSize;
         try
@@ -71,49 +72,52 @@ using System;
 
         GD.Print($"Floor Tile: {floorTile != null}, Wall Tile: {wallTile != null}");
 
-        if (floorTile != null || wallTile != null)
+        if (wallTile != null)
+            return wallTile;
+        return floorTile;
+    }
+    public InventoryItem MineNextTile(Vector2I position, Vector2I direction)
+    {
+        TileData tileData = GetNextTile(position, direction);
+        InventoryItem resultItem = null;
+        if (tileData != null)
         {
+            var mineralType = tileData.GetCustomData("Mineral_type").AsString();
+            var quantity = tileData.GetCustomData("Quantity").AsDouble();
 
-            bool nextWallTileExists = wallTile != null;
-            bool nextFloorTileExists = floorTile != null;
-
-
-
-            GD.Print($"Next wall tile exists: {nextWallTileExists}");
-            GD.Print($"Next floor tile exists: {nextFloorTileExists}");
-
-            bool nextWallTileWalkableValue = nextWallTileExists ? wallTile.GetCustomData("Walkable").AsBool() : false;
-            bool nextFloorTileWalkableValue = nextFloorTileExists ? floorTile.GetCustomData("Walkable").AsBool() : false;
-
-
-            string mineralType = "";
-            if (floorTile != null)
+            ItemType type = ItemTypeConverter.GetItemTypeFromDescription(mineralType);
+            if (type != ItemType.Undefined)
             {
-                mineralType = floorTile.GetCustomData("Mineral_type").AsString();
+                resultItem = new InventoryItem(mineralType, quantity);
             }
+       
 
-  
-            if (string.IsNullOrEmpty(mineralType) && wallTile != null)
-            {
-                mineralType = wallTile.GetCustomData("Mineral_type").AsString();
-            }
-
-            if (!string.IsNullOrEmpty(mineralType))
-            {
-                GD.Print($"Mineral type: {mineralType}");
-            }
+        }
+    }
+    public bool IsNextTileWalkable(Vector2I position, Vector2I direction)
+    {
+        
+        TileData tileData = GetNextTile(position, direction);
 
 
-            if (nextWallTileExists)
-                GD.Print($"Next wall tile walkable: {nextWallTileWalkableValue}");
+        if (tileData != null)
+        {
+          bool nextWallTileExists = tileData != null;
+          bool nextFloorTileWalkableValue = nextWallTileExists ? tileData.GetCustomData("Walkable").AsBool() : false;
+         
+          string mineralType = "";
+
+        if (tileData != null)
+        {
+            mineralType = tileData.GetCustomData("Mineral_type").AsString();
+        }
+
             if (nextWallTileExists)
                 GD.Print($"Next floor tile walkable: {nextFloorTileWalkableValue}");
 
+            bool nextFloorIsWalkable = tileData != null && nextFloorTileWalkableValue;
 
-            bool nextWallIsUnwalkable = wallTile != null && !nextWallTileWalkableValue;
-            bool nextFloorIsWalkable = floorTile != null && nextFloorTileWalkableValue;
-
-            if (nextWallIsUnwalkable)
+            if (!nextFloorIsWalkable)
             {
                 GD.Print("Wall tile is unwalkable. Returning false.");
                 return false;

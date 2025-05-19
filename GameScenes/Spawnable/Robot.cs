@@ -1,11 +1,13 @@
 using Godot;
 using Godot.Collections;
 using NewGameProject.Helper;
+using NewGameProject.Inventory;
 using NewGameProject.ServerLogic.Parsing;
 using Pliant.Grammars;
 using Pliant.Runtime;
 using Pliant.Tree;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using static Godot.TextServer;
@@ -16,6 +18,7 @@ public partial class Robot : CharacterBody2D
     private SignalBus _signalBus;
     private Vector2I _targetPosition = Vector2I.Zero;
 
+    public List<InventoryItem> inventory = new List<InventoryItem>();
 
     private bool _isMoving = false;
     private AnimatedSprite2D _sprite;
@@ -97,6 +100,11 @@ public partial class Robot : CharacterBody2D
         await ProcessInput(data);
     }
 
+
+    public async Task MineNextTile()
+    {
+
+    }
     public async Task ProcessInput(Dictionary data)
     {
         if (isActive)
