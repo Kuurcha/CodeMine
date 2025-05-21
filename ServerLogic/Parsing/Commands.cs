@@ -11,13 +11,14 @@ namespace NewGameProject.ServerLogic.Parsing
     public interface ICommand
     {
         string CommandName { get; }
+        string Id { get; set; }
         Dictionary ToDictionary();
     }
 
     public class ListCommand : ICommand
     {
         public string CommandName { get; } = "List";
-
+        public string Id { get; set; } = null;
         public Dictionary ToDictionary()
         {
             return new Dictionary
@@ -94,5 +95,52 @@ namespace NewGameProject.ServerLogic.Parsing
         }
     }
 
+    public class ScanCommand : ICommand
+    {
+        public string CommandName => "Scan";
+        public string Id { get; set; }
+        public bool Next { get; set; } = false;
 
+        public Dictionary ToDictionary()
+        {
+            return new Dictionary
+        {
+            {"CommandName", CommandName},
+            {"Id", Id},
+            {"Next", Next}
+        };
+        }
+
+        public static ScanCommand FromDictionary(Dictionary dict)
+        {
+            return new ScanCommand
+            {
+                Id = dict["Id"].ToString(),
+                Next = dict.ContainsKey("Next") && (bool)dict["Next"]
+            };
+        }
+    }
+
+    public class DigCommand : ICommand
+    {
+        public string CommandName => "Dig";
+        public string Id { get; set; }
+
+        public Dictionary ToDictionary()
+        {
+            return new Dictionary
+        {
+            {"CommandName", CommandName},
+            {"Id", Id}
+        };
+        }
+
+        public static DigCommand FromDictionary(Dictionary dict)
+        {
+            return new DigCommand
+            {
+                Id = dict["Id"].ToString()
+            };
+        }
+    }
 }

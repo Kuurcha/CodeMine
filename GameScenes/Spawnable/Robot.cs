@@ -2,6 +2,7 @@ using Godot;
 using Godot.Collections;
 using NewGameProject.Helper;
 using NewGameProject.Inventory;
+using NewGameProject.Misc.Extensions;
 using NewGameProject.ServerLogic.Parsing;
 using Pliant.Grammars;
 using Pliant.Runtime;
@@ -72,8 +73,8 @@ public partial class Robot : CharacterBody2D
     {
         GD.Print("LOADED ROBOT");
         _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-        _tileDetector = GetNode<TileDetector>("TileDetector");
-        _tileDetector.RobotInternalId = InternalId;
+        _tileDetector = new TileDetector();
+        this.BecomePregnant(_tileDetector); 
         _signalBus = GetNode<SignalBus>("/root/SignalBus");
 
         if (_signalBus == null)
@@ -88,6 +89,19 @@ public partial class Robot : CharacterBody2D
    
         Position = GridPosition * tileSize; 
 
+    }
+
+    private void OnBusReady()
+    {
+        GD.Print("Initializing robot now that bus is ready");
+
+        _sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        _tileDetector = GetNode<TileDetector>("TileDetector");
+
+        _signalBus.ProcessedCommandRecieved += OnCommandSend;
+        _signalBus.SimulationAborted += OnSimulationAborted;
+
+        Position = GridPosition * tileSize;
     }
 
     private void OnSimulationAborted()
@@ -111,22 +125,27 @@ public partial class Robot : CharacterBody2D
         {
             _simulationAborted = false;
             ICommand command = CommandFactory.FromDictionary(data);
-            if (command is CheckRobotCommand checkCommand)
+            if (command.Id != null && command.Id == this.Id)
             {
-                string targetId = checkCommand.Id;
-                if (this.Id == targetId)
-                    _signalBus.SocketClient.SendMessage(this.ToJson());
-            }
-            if (command is MoveCommand moveCommand)
-            {
-                string targetId = moveCommand.Id;
-                string direction = moveCommand.Direction;
-                int steps = moveCommand.Steps;
-                if (targetId == this.Id)
+                if (command is CheckRobotCommand checkCommand)
                 {
+                    _signalBus.SocketClient.SendMessage(this.ToJson());
+                }
+                if (command is ScanCommand scanCommand)
+                {
+                    Vector2I direction = new Vector2I(0, 0);
+                    if (scanCommand.Next)
+                        direction = DirectionHelper.DirectionFromString(LastDirection);
+                    TileData tile = _tileDetector.GetNextTile(this.GridPosition, direction);
+                    _signalBus.SocketClient.SendMessage(TileHelper.TileDataToJson(tile));
+
+                }
+                if (command is MoveCommand moveCommand)
+                {
+                    string targetId = moveCommand.Id;
+                    string direction = moveCommand.Direction;
+                    int steps = moveCommand.Steps;
                     Vector2I moveDirection = Vector2I.Zero;
-
-
                     switch (direction)
                     {
                         case "left":
@@ -156,8 +175,9 @@ public partial class Robot : CharacterBody2D
 
                     await MoveStepByStep(moveDirection, steps);
                     _signalBus.EmitSignal(nameof(SignalBus.SimulationEnded));
+
+
                 }
-                
             }
         }
     }

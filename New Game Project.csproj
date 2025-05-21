@@ -1,11 +1,15 @@
-﻿<Project Sdk="Godot.NET.Sdk/4.4.1">
+﻿<Project Sdk="Godot.NET.Sdk/4.3.0">
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>NewGameProject</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="gamescenes\CommandInfo.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="GameScenes\calculator - Copy (2).pdl" />
+    <None Include="GameScenes\calculator - Copy (3).pdl" />
     <None Include="GameScenes\calculator - Copy.pdl" />
     <None Include="gamescenes\calculator.pdl" />
   </ItemGroup>

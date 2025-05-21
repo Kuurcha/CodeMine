@@ -4,20 +4,24 @@ using NewGameProject.Helper;
 using NewGameProject.Inventory;
 using System;
 
-    public partial class TileDetector : Node2D
+    public partial class TileDetector : Node
     {
         private TileMapLayer _wallMap;
         private TileMapLayer _floorMap;
-        
-        [Export]
-        public string RobotInternalId { get; set; } = "";
-        
+
         private int tileSize = 16;
     
         public override void _Ready()
         {
-            _floorMap = GetNode<TileMapLayer>("../../Map/FloorMap");
-            _wallMap = GetNode<TileMapLayer>("../../Map/WallMap");    
+            if (!GetTree().CurrentScene.TryGetNode<TileMapLayer>(out _floorMap, recursive: true, name: "FloorMap"))
+            {
+                GD.PrintErr("FloorMap not found!");
+            }
+
+            if (!GetTree().CurrentScene.TryGetNode<TileMapLayer>(out _wallMap, recursive: true, name: "WallMap"))
+            {
+                GD.PrintErr("WallMap not found!");
+            }
         }
 
         public void DetectTiles(Vector2 position)
@@ -43,6 +47,13 @@ using System;
             }
         }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="position"></param>
+    /// <param name="direction">(0,0) вернёт текущий тайл</param>
+    /// <returns></returns>
+    /// <exception cref="ObjectDisposedException"></exception>
     public TileData GetNextTile(Vector2I position, Vector2I direction)
     {
         Vector2I positionCalc = position * tileSize + direction * tileSize;
@@ -54,7 +65,7 @@ using System;
         catch (ObjectDisposedException ex)
         {
             throw new ObjectDisposedException(
-                $"{nameof(_floorMap)} for Robot ID {RobotInternalId} has been disposed.",
+                $"{nameof(_floorMap)} has been disposed.",
                 ex
             );
         }
@@ -93,6 +104,7 @@ using System;
        
 
         }
+        return resultItem;
     }
     public bool IsNextTileWalkable(Vector2I position, Vector2I direction)
     {

@@ -40,6 +40,14 @@ public partial class SignalBus : Node
     [Signal]
     public delegate void SocketCommandRecievedEventHandler(string data);
 
+    [Signal]
+    public delegate void BusReadyEventHandler();
+
+    public override void _Ready()
+    {
+
+        EmitSignal(nameof(BusReady));
+    }
     public void EmitToggleGrid()
     {
         EmitSignal(nameof(ToggleGrid));

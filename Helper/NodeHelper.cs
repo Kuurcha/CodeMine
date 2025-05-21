@@ -30,6 +30,43 @@ namespace NewGameProject.Helper
         }
 
         /// <summary>
+        /// Attempt to find a node of type T in this node's children, optionally matching by name.
+        /// </summary>
+        /// <typeparam name="T">Node type.</typeparam>
+        /// <param name="n">The node to search from.</param>
+        /// <param name="node">The found node, if any.</param>
+        /// <param name="recursive">If true, performs a depth-first recursive search. NOTE: Should probably be breadth-first.</param>
+        /// <param name="name">Optional name to match.</param>
+        /// <returns>Whether a matching node was found.</returns>
+        public static bool TryGetNode<T>(this Node n, out T node, bool recursive = false, string name = null) where T : Node
+        {
+            for (int i = 0; i < n.GetChildCount(); i++)
+            {
+                Node child = n.GetChild(i);
+                GD.Print($"Checking {child.Name}...");
+
+                if (child is T typedNode && (name == null || child.Name == name))
+                {
+                    GD.Print($"Found the {typeof(T)} node{(name != null ? $" with name '{name}'" : "")}!");
+                    node = typedNode;
+                    return true;
+                }
+
+                if (recursive && child.GetChildCount() > 0)
+                {
+                    if (child.TryGetNode(out T recursiveResult, true, name))
+                    {
+                        node = recursiveResult;
+                        return true;
+                    }
+                }
+            }
+
+            node = null;
+            return false;
+        }
+
+        /// <summary>
         /// Attempt to find a node of type, T, in this node's children.
         /// </summary>
         /// <typeparam name="T">Node type.</typeparam>

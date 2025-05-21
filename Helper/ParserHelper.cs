@@ -46,8 +46,20 @@ namespace NewGameProject.Helper
             }
             Console.WriteLine($"Recognized: {recognized}, Accepted: {accepted}");
             if (!recognized || !accepted)
+            {
                 Console.Error.WriteLine($"Error at position {errorPosition}");
-           
+
+                if (errorPosition >= 0 && errorPosition < input.Length)
+                {
+                    var errorSymbol = input[errorPosition];
+                    Console.Error.WriteLine($"Problematic character: '{errorSymbol}'");
+                }
+                else
+                {
+                    Console.Error.WriteLine("Error position is out of bounds.");
+                }
+            }
+
             try
             {
                 if (recognized && accepted)

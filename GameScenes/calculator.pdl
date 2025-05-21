@@ -2,7 +2,7 @@ Message
 	= Command;
 		
 Command 
-	= MoveCommand | CheckCommand | ListCommand ;
+	= MoveCommand | CheckCommand | ListCommand | ScanCommand | DigCommand ;
 		
 MoveCommand 
 	= 'Move' Id Direction Steps;
@@ -12,6 +12,12 @@ CheckCommand
 
 ListCommand
 	= 'List'|'list';
+
+ScanCommand 
+	= 'Scan' Id ['Next'];
+
+DigCommand 
+	= 'Dig' Id;
 
 Id
 	= /[a-zA-Z_][a-zA-Z0-9_]*/ ;

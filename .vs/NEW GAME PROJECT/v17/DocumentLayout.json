@@ -1,141 +1,106 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\",
+  "WorkspaceRootPath": "C:\\Diploma\\TestCommands\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\calculator.pdl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\calculator.pdl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\misc\\tiledetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\tiledetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\inventory\\itemlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:inventory\\itemlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\spawnable\\robot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\inventory\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:inventory\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\misc\\genericcopier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\genericcopier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\serverlogic\\parsing\\commandbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\parsing\\commandbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\helper\\parserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\parserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\levels\\genericlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\genericlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\genericlevel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\sidemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\misc\\tiledetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\tiledetector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\new game project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:new game project.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\serverlogic\\socketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\socketclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\serverlogic\\parsing\\commandfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\parsing\\commandfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\levels\\genericlevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\genericlevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\serverlogic\\parsing\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\parsing\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\serverlogic\\socketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\socketserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\serverlogic\\parsing\\commandenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\parsing\\commandenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\ca789a16fd341a873c3ad2c93c10496c4152c20f15a7f2cf74437ce8e21626c7\\ParseEngine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\e71eac70ff3f4d72818091164f5c8f31ef32f402bd975fbf17eee97d2a4584ee\\Task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\71c5eb4ed245aed0030d62bf5b27205e7fa3a41c\\SignalBus_ScriptSignals.generated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\calculator - copy (2).pdl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\calculator - copy (2).pdl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\calculator - copy.pdl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\calculator - copy.pdl||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Mikhail\\AppData\\Local\\Temp\\VSGeneratedDocuments\\1fc1a6d2-9091-7d49-64c4-dccb1dc7867b\\SignalBus_ScriptMethods.generated.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\filehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\helper\\nodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\nodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\nodehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\new game project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:new game project.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\parserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\parserhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\misc\\extensions\\nodeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:misc\\extensions\\nodeextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\gamenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\directionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\directionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\helper\\tilehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:helper\\tilehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\genericlevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\genericlevelui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\gridoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\gridoverlay.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:assets\\shared\\signalbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\assets\\shared\\mapinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:assets\\shared\\mapinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Diploma\\TestCommands\\GameScenes\\Technical\\SocketNode2D.cs.uid||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameScenes\\Technical\\SocketNode2D.cs.uid||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\technical\\socketnode2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\technical\\socketnode2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\camera2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\mapgridclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\mapgridclick.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|f:\\godot_v4.4.1-stable_mono_win64\\diploma\\codemine\\gamescenes\\technical\\socketnode2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\technical\\socketnode2d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maplogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\maptest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\otheruielements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\otheruielements.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\levels\\level1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\calculator.pdl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\calculator.pdl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\gamescenes\\calculator - copy.pdl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:gamescenes\\calculator - copy.pdl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|c:\\diploma\\testcommands\\serverlogic\\parsing\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CCB480C-C290-4052-AB50-3F0EBA246FEB}|New Game Project.csproj|solutionrelative:serverlogic\\parsing\\commands.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -145,55 +110,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 21,
+          "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:216462704:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:448921440:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1429691006:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1547452308:0:{81164725-9a96-4ece-a4cb-440d8fd285e5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:702658569:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:125462101:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Commands.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\ServerLogic\\Parsing\\Commands.cs",
+              "RelativeDocumentMoniker": "ServerLogic\\Parsing\\Commands.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\ServerLogic\\Parsing\\Commands.cs",
+              "RelativeToolTip": "ServerLogic\\Parsing\\Commands.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAuwBMAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:04:53.044Z",
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Bookmark",
@@ -205,419 +143,306 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItemList.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Inventory\\ItemList.cs",
-              "RelativeDocumentMoniker": "Inventory\\ItemList.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Inventory\\ItemList.cs",
-              "RelativeToolTip": "Inventory\\ItemList.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAASwB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T20:20:53.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Item.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Inventory\\Item.cs",
-              "RelativeDocumentMoniker": "Inventory\\Item.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Inventory\\Item.cs",
-              "RelativeToolTip": "Inventory\\Item.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T20:14:26.589Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ParserHelper.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Helper\\ParserHelper.cs",
-              "RelativeDocumentMoniker": "Helper\\ParserHelper.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Helper\\ParserHelper.cs",
-              "RelativeToolTip": "Helper\\ParserHelper.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAiwCcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:00:00.23Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Commands.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\Commands.cs",
-              "RelativeDocumentMoniker": "ServerLogic\\Parsing\\Commands.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\Commands.cs",
-              "RelativeToolTip": "ServerLogic\\Parsing\\Commands.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:43:29.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MapLogic.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\MapLogic.cs",
-              "RelativeDocumentMoniker": "GameScenes\\MapLogic.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\MapLogic.cs",
-              "RelativeToolTip": "GameScenes\\MapLogic.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAgwB4AAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:39:12.146Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "SideMenu.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\SideMenu.cs",
-              "RelativeDocumentMoniker": "GameScenes\\SideMenu.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\SideMenu.cs",
-              "RelativeToolTip": "GameScenes\\SideMenu.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAIAwwJYAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:50:26.213Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Robot.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Spawnable\\Robot.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Spawnable\\Robot.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Spawnable\\Robot.cs",
-              "RelativeToolTip": "GameScenes\\Spawnable\\Robot.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAEwEoAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:05:12.857Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "calculator.pdl",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\calculator.pdl",
-              "RelativeDocumentMoniker": "GameScenes\\calculator.pdl",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\calculator.pdl",
-              "RelativeToolTip": "GameScenes\\calculator.pdl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-04-28T18:45:37.752Z",
+              "Title": "Robot.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Spawnable\\Robot.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Spawnable\\Robot.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Spawnable\\Robot.cs",
+              "RelativeToolTip": "GameScenes\\Spawnable\\Robot.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAQwIAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:07:36.567Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CommandBuilder.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\CommandBuilder.cs",
-              "RelativeDocumentMoniker": "ServerLogic\\Parsing\\CommandBuilder.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\CommandBuilder.cs",
-              "RelativeToolTip": "ServerLogic\\Parsing\\CommandBuilder.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAlwBcAAAAYAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ParserHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\ParserHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\ParserHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\ParserHelper.cs",
+              "RelativeToolTip": "Helper\\ParserHelper.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAgwDYAAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T18:19:48.98Z"
+              "WhenOpened": "2025-05-20T18:21:54.333Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TileDetector.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Misc\\TileDetector.cs",
-              "RelativeDocumentMoniker": "Misc\\TileDetector.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Misc\\TileDetector.cs",
-              "RelativeToolTip": "Misc\\TileDetector.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAASwF0AAAAAAAAAAAAAAA==",
+              "Title": "GenericLevel.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevel.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevel.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevel.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\GenericLevel.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAswE8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T17:29:59.629Z",
+              "WhenOpened": "2025-05-20T18:47:43.648Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TileDetector.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
+              "RelativeDocumentMoniker": "Misc\\TileDetector.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\TileDetector.cs",
+              "RelativeToolTip": "Misc\\TileDetector.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T17:10:10.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NodeHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\NodeHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\NodeHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\NodeHelper.cs",
+              "RelativeToolTip": "Helper\\NodeHelper.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAADwvzYAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:21:53.472Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "GenericCopier.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Misc\\GenericCopier.cs",
-              "RelativeDocumentMoniker": "Misc\\GenericCopier.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Misc\\GenericCopier.cs",
-              "RelativeToolTip": "Misc\\GenericCopier.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "NodeExtensions.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Misc\\Extensions\\NodeExtensions.cs",
+              "RelativeDocumentMoniker": "Misc\\Extensions\\NodeExtensions.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Misc\\Extensions\\NodeExtensions.cs",
+              "RelativeToolTip": "Misc\\Extensions\\NodeExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:39:20.488Z"
+              "WhenOpened": "2025-05-21T21:21:48.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GameNode.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\GameNode.cs",
+              "RelativeDocumentMoniker": "GameScenes\\GameNode.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\GameNode.cs",
+              "RelativeToolTip": "GameScenes\\GameNode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:40:24.921Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DirectionHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\DirectionHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\DirectionHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\DirectionHelper.cs",
+              "RelativeToolTip": "Helper\\DirectionHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:22:00.779Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "GenericLevel.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Levels\\GenericLevel.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevel.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Levels\\GenericLevel.cs",
-              "RelativeToolTip": "GameScenes\\Levels\\GenericLevel.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAwwFwAAAAUAAAAAAAAAA==",
+              "Title": "TileHelper.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Helper\\TileHelper.cs",
+              "RelativeDocumentMoniker": "Helper\\TileHelper.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Helper\\TileHelper.cs",
+              "RelativeToolTip": "Helper\\TileHelper.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAmwA4AAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:33:17.699Z"
+              "WhenOpened": "2025-05-20T18:32:26.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GenericLevelUI.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevelUI.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevelUI.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GenericLevelUI.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\GenericLevelUI.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAiwCYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:59:44.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GridOverlay.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GridOverlay.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\GridOverlay.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\GridOverlay.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\GridOverlay.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-21T21:22:12.939Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "New Game Project",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
-              "RelativeDocumentMoniker": "New Game Project.csproj",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
-              "RelativeToolTip": "New Game Project.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-01T17:05:42.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "SocketServer.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\SocketServer.cs",
-              "RelativeDocumentMoniker": "ServerLogic\\SocketServer.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\SocketServer.cs",
-              "RelativeToolTip": "ServerLogic\\SocketServer.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwD8AAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T19:13:12.261Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "GenericLevelUI.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Levels\\GenericLevelUI.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Levels\\GenericLevelUI.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Levels\\GenericLevelUI.cs",
-              "RelativeToolTip": "GameScenes\\Levels\\GenericLevelUI.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:24:30.712Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CommandFactory.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\CommandFactory.cs",
-              "RelativeDocumentMoniker": "ServerLogic\\Parsing\\CommandFactory.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\CommandFactory.cs",
-              "RelativeToolTip": "ServerLogic\\Parsing\\CommandFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:21:39.413Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "GameNode.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\GameNode.cs",
-              "RelativeDocumentMoniker": "GameScenes\\GameNode.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\GameNode.cs",
-              "RelativeToolTip": "GameScenes\\GameNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:41:39.383Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MapTest.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\MapTest.cs",
-              "RelativeDocumentMoniker": "GameScenes\\MapTest.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\MapTest.cs",
-              "RelativeToolTip": "GameScenes\\MapTest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T18:50:34.505Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "SignalBus.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Assets\\Shared\\SignalBus.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
               "RelativeDocumentMoniker": "Assets\\Shared\\SignalBus.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Assets\\Shared\\SignalBus.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\SignalBus.cs",
               "RelativeToolTip": "Assets\\Shared\\SignalBus.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAAyAAAAAAAAAA==",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAcAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T15:38:37.159Z"
+              "WhenOpened": "2025-05-20T18:57:15.817Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "SocketClient.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\SocketClient.cs",
-              "RelativeDocumentMoniker": "ServerLogic\\SocketClient.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\SocketClient.cs",
-              "RelativeToolTip": "ServerLogic\\SocketClient.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDQAAAAFAAAAAAAAAA==",
+              "Title": "MapInfo.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\Assets\\Shared\\MapInfo.cs",
+              "RelativeDocumentMoniker": "Assets\\Shared\\MapInfo.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\Assets\\Shared\\MapInfo.cs",
+              "RelativeToolTip": "Assets\\Shared\\MapInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:41:39.397Z"
+              "WhenOpened": "2025-05-20T18:59:41.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SocketNode2D.cs.uid",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Technical\\SocketNode2D.cs.uid",
+              "RelativeDocumentMoniker": "GameScenes\\Technical\\SocketNode2D.cs.uid",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Technical\\SocketNode2D.cs.uid",
+              "RelativeToolTip": "GameScenes\\Technical\\SocketNode2D.cs.uid",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-05-21T20:41:33.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "SocketNode2D.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Technical\\SocketNode2D.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Technical\\SocketNode2D.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Technical\\SocketNode2D.cs",
+              "RelativeToolTip": "GameScenes\\Technical\\SocketNode2D.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:40:24.936Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Camera2d.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Camera2d.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Camera2d.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Camera2d.cs",
+              "RelativeToolTip": "GameScenes\\Camera2d.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:59:32.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MapGridClick.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\MapGridClick.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\MapGridClick.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\MapGridClick.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\MapGridClick.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:59:50.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "MapLogic.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
+              "RelativeDocumentMoniker": "GameScenes\\MapLogic.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapLogic.cs",
+              "RelativeToolTip": "GameScenes\\MapLogic.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwBMAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:40:24.946Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Map.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Map.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Map.cs",
+              "RelativeToolTip": "GameScenes\\Map.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAArwAsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T18:59:34.177Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MapTest.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\MapTest.cs",
+              "RelativeDocumentMoniker": "GameScenes\\MapTest.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\MapTest.cs",
+              "RelativeToolTip": "GameScenes\\MapTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T19:01:15.968Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "CommandEnum.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\CommandEnum.cs",
-              "RelativeDocumentMoniker": "ServerLogic\\Parsing\\CommandEnum.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\ServerLogic\\Parsing\\CommandEnum.cs",
-              "RelativeToolTip": "ServerLogic\\Parsing\\CommandEnum.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Title": "OtherUiElements.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\OtherUiElements.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\OtherUiElements.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\OtherUiElements.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\OtherUiElements.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T11:58:25.322Z"
+              "WhenOpened": "2025-05-20T18:59:50.839Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "Camera2d.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Camera2d.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Camera2d.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Camera2d.cs",
-              "RelativeToolTip": "GameScenes\\Camera2d.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Level1.cs",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\Level1.cs",
+              "RelativeDocumentMoniker": "GameScenes\\Levels\\Level1.cs",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\Levels\\Level1.cs",
+              "RelativeToolTip": "GameScenes\\Levels\\Level1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:23:02.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "Task.cs",
-              "DocumentMoniker": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\e71eac70ff3f4d72818091164f5c8f31ef32f402bd975fbf17eee97d2a4584ee\\Task.cs",
-              "ToolTip": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\e71eac70ff3f4d72818091164f5c8f31ef32f402bd975fbf17eee97d2a4584ee\\Task.cs [Read Only]",
-              "ViewState": "AgIAAPMHAAAAAAAAAAAAAAMIAAAFAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T18:26:27.653Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "SignalBus_ScriptMethods.generated.cs",
-              "DocumentMoniker": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\VSGeneratedDocuments\\1fc1a6d2-9091-7d49-64c4-dccb1dc7867b\\SignalBus_ScriptMethods.generated.cs",
-              "ToolTip": "SignalBus_ScriptMethods.generated.cs [generated by Godot.SourceGenerators.ScriptMethodsGenerator]",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "OverriddenToolTip": "SignalBus_ScriptMethods.generated.cs [generated by Godot.SourceGenerators.ScriptMethodsGenerator]",
-              "WhenOpened": "2025-05-01T16:58:00.838Z"
+              "WhenOpened": "2025-05-20T18:59:49.191Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 22,
-              "Title": "ParseEngine.cs",
-              "DocumentMoniker": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\ca789a16fd341a873c3ad2c93c10496c4152c20f15a7f2cf74437ce8e21626c7\\ParseEngine.cs",
-              "ToolTip": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\ca789a16fd341a873c3ad2c93c10496c4152c20f15a7f2cf74437ce8e21626c7\\ParseEngine.cs [Read Only]",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAAAF4AAAACAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T18:23:57.581Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "SignalBus_ScriptSignals.generated.cs",
-              "DocumentMoniker": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\71c5eb4ed245aed0030d62bf5b27205e7fa3a41c\\SignalBus_ScriptSignals.generated.cs",
-              "ToolTip": "C:\\Users\\Mikhail\\AppData\\Local\\Temp\\.vsdbgsrc\\71c5eb4ed245aed0030d62bf5b27205e7fa3a41c\\SignalBus_ScriptSignals.generated.cs [Read Only]",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAAAGcAAAAMAAAAAQAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T18:23:54.48Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "calculator - Copy (2).pdl",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\calculator - Copy (2).pdl",
-              "RelativeDocumentMoniker": "GameScenes\\calculator - Copy (2).pdl",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\calculator - Copy (2).pdl",
-              "RelativeToolTip": "GameScenes\\calculator - Copy (2).pdl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
+              "Title": "calculator.pdl",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\calculator.pdl",
+              "RelativeDocumentMoniker": "GameScenes\\calculator.pdl",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\calculator.pdl",
+              "RelativeToolTip": "GameScenes\\calculator.pdl",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAUwAQAAABHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-01T16:13:57.993Z"
+              "WhenOpened": "2025-05-20T18:37:41.848Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Level1.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Levels\\Level1.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Levels\\Level1.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Levels\\Level1.cs",
-              "RelativeToolTip": "GameScenes\\Levels\\Level1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-01T16:05:11.948Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 23,
               "Title": "calculator - Copy.pdl",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\calculator - Copy.pdl",
+              "DocumentMoniker": "C:\\Diploma\\TestCommands\\GameScenes\\calculator - Copy.pdl",
               "RelativeDocumentMoniker": "GameScenes\\calculator - Copy.pdl",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\calculator - Copy.pdl",
+              "ToolTip": "C:\\Diploma\\TestCommands\\GameScenes\\calculator - Copy.pdl",
               "RelativeToolTip": "GameScenes\\calculator - Copy.pdl",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-01T16:12:22.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "CSharpInstanceBridge.cs",
-              "DocumentMoniker": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs",
-              "ToolTip": "C:\\Users\\Ioffe\\AppData\\Local\\Temp\\.vsdbgsrc\\e02c6d47bcf93dc176fd92dbe50e48b6346bd905c9638f8cf9ab6f4e860123e7\\CSharpInstanceBridge.cs [Read Only]",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAgwA8AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:48:33.479Z",
-              "EditorCaption": " [Read Only]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "New Game Project.csproj",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
-              "RelativeDocumentMoniker": "New Game Project.csproj",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
-              "RelativeToolTip": "New Game Project.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-28T18:44:56.319Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "FileHelper.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Helper\\FileHelper.cs",
-              "RelativeDocumentMoniker": "Helper\\FileHelper.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Helper\\FileHelper.cs",
-              "RelativeToolTip": "Helper\\FileHelper.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:23:47.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "Map.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Map.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Map.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Map.cs",
-              "RelativeToolTip": "GameScenes\\Map.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T18:23:04.401Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "SocketNode2D.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Technical\\SocketNode2D.cs",
-              "RelativeDocumentMoniker": "GameScenes\\Technical\\SocketNode2D.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\GameScenes\\Technical\\SocketNode2D.cs",
-              "RelativeToolTip": "GameScenes\\Technical\\SocketNode2D.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABNAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:44:43.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "NodeHelper.cs",
-              "DocumentMoniker": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Helper\\NodeHelper.cs",
-              "RelativeDocumentMoniker": "Helper\\NodeHelper.cs",
-              "ToolTip": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\Helper\\NodeHelper.cs",
-              "RelativeToolTip": "Helper\\NodeHelper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-26T17:43:02.895Z"
+              "WhenOpened": "2025-05-20T18:47:50.81Z"
             }
           ]
         }

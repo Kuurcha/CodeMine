@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj": {}
+    "C:\\Diploma\\TestCommands\\New Game Project.csproj": {}
   },
   "projects": {
-    "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj": {
+    "C:\\Diploma\\TestCommands\\New Game Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
+        "projectUniqueName": "C:\\Diploma\\TestCommands\\New Game Project.csproj",
         "projectName": "New Game Project",
-        "projectPath": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\New Game Project.csproj",
-        "packagesPath": "C:\\Users\\Mikhail\\.nuget\\packages\\",
-        "outputPath": "F:\\Godot_v4.4.1-stable_mono_win64\\Diploma\\CodeMine\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Diploma\\TestCommands\\New Game Project.csproj",
+        "packagesPath": "C:\\Users\\Ioffe\\.nuget\\packages\\",
+        "outputPath": "C:\\Diploma\\TestCommands\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "F:\\visual studi 2 shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Mikhail\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ioffe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -42,9 +43,8 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+          "auditMode": "direct"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -56,15 +56,15 @@
             },
             "Godot.SourceGenerators": {
               "target": "Package",
-              "version": "[4.4.1, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharp": {
               "target": "Package",
-              "version": "[4.4.1, )"
+              "version": "[4.3.0, )"
             },
             "GodotSharpEditor": {
               "target": "Package",
-              "version": "[4.4.1, )"
+              "version": "[4.3.0, )"
             },
             "Pliant": {
               "target": "Package",
@@ -87,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
