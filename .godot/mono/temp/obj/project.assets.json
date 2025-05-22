@@ -5842,9 +5842,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Diploma\\TestCommands\\New Game Project.csproj",
+      "projectUniqueName": "C:\\DIPLOMA\\TESTCOMMANDS\\New Game Project.csproj",
       "projectName": "New Game Project",
-      "projectPath": "C:\\Diploma\\TestCommands\\New Game Project.csproj",
+      "projectPath": "C:\\DIPLOMA\\TESTCOMMANDS\\New Game Project.csproj",
       "packagesPath": "C:\\Users\\Ioffe\\.nuget\\packages\\",
       "outputPath": "C:\\DIPLOMA\\TESTCOMMANDS\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",

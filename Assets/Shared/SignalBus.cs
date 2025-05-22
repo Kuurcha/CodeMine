@@ -1,6 +1,7 @@
 using Godot;
 using Godot.Collections;
 using NewGameProject.GameScenes.Levels;
+using NewGameProject.ServerLogic;
 using Pliant.Grammars;
 using Pliant.Runtime;
 using System;
@@ -9,9 +10,11 @@ public partial class SignalBus : Node
 {
 
     public string LevelPath { get; set; } = string.Empty;
-    public SocketClient SocketClient { get; set; }
+    public SocketServer SocketServer { get; set; }
     public IGrammar CurrentGrammar { get; set; }
     public GenericLevel CurrentLevel { get; set; }
+
+    public string? ClientGuid = null;
 
     public static int TileSize = 16;
     public Vector2 LevelOrigin { get;    set; }
@@ -51,5 +54,11 @@ public partial class SignalBus : Node
     public void EmitToggleGrid()
     {
         EmitSignal(nameof(ToggleGrid));
+    }
+
+    public void SendSocketMessage(string message)
+    {
+        if (this.ClientGuid != null)
+            this.SocketServer.SendMessageToClient(this.ClientGuid, message);
     }
 }

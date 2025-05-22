@@ -6,61 +6,147 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace NewGameProject.ServerLogic
 {
-    internal class SocketServer
+    public partial class SocketServer : Node
     {
 
-/*        private StreamPeerTcp _client; // the connected client
-
-        public void Start(string address, int port)
+        public class ClientConnection
         {
-            GD.Print("Starting server at " + address + ":" + port);
-            var ip = IPAddress.Parse(address); // optional if you want specific binding
-            Error err = _server.Listen(port, ip.ToString());
+            public StreamPeerTls TlsStream { get; set; }
+            public string ClientId { get; set; }  
+        }
 
+        private Godot.TcpServer _server = new Godot.TcpServer();
+        private List<ClientConnection> _clinets = new();
+
+        private bool _isListening = false;
+
+
+        private X509Certificate _certificate;
+        private CryptoKey _privateKey = new CryptoKey();
+
+        private SignalBus _signalBus;
+        public override void _Ready()
+        {
+            _signalBus =  GetNode<SignalBus>("/root/SignalBus");
+            _certificate = new X509Certificate();
+            var certLoadResult = _certificate.Load("res://cert//cert.pem");
+            if (certLoadResult != Error.Ok)
+            {
+                GD.PrintErr("Failed to load certificate");
+            }
+
+            var keyLoadResult = _privateKey.Load("res://cert//key.pem");
+            if (keyLoadResult != Error.Ok)
+            {
+                GD.PrintErr("Failed to load private key");
+            }
+        }
+        public void StartServer(string address = "0.0.0.0", ushort port = 5000)
+        {
+                
+            var err = _server.Listen(port, address);
             if (err != Error.Ok)
             {
-                GD.PrintErr("Server failed to start: " + err);
+                GD.PrintErr("Failed to start TCP server: " + err);
+                return;
             }
-            else
-            {
-                GD.Print("Server started successfully.");
-            }
+
+            _isListening = true;
+            GD.Print($"TCP server listening on {address}:{port}");
         }
 
-        public void Poll()
+        public override void _Process(double delta)
         {
-            _server.Poll(); // Important to poll server
+            if (!_isListening)
+                return;
 
+    
             if (_server.IsConnectionAvailable())
             {
-                _client = _server.TakeConnection();
-                GD.Print("Client connected!");
-            }
+                var peerConnection = _server.TakeConnection();
+                var tls = new StreamPeerTls();
+                var tls_options = TlsOptions.Server(_privateKey, _certificate);
 
-            if (_client != null && _client.GetStatus() == StreamPeerTcp.Status.Connected)
-            {
-                if (_client.GetAvailableBytes() > 0)
+                try
                 {
-                    string received = _client.GetUtf8String(_client.GetAvailableBytes());
-                    GD.Print("Received from client: ", received);
+                    tls.AcceptStream(peerConnection, tls_options);
+                    var client = new ClientConnection
+                    {
+                        TlsStream = tls,
+                        ClientId = Guid.NewGuid().ToString()
+                    };
+                    _signalBus.ClientGuid = client.ClientId;
+                    _clinets.Add(client);
+
+                    GD.Print("Client connected with TLS");
+                }
+                catch (Exception ex)
+                {
+                    GD.PrintErr($"TLS AcceptStream failed: {ex.Message}");
+                    GD.PrintErr(ex.StackTrace); 
                 }
             }
+
+            for (int i = _clinets.Count - 1; i >= 0; i--)
+            {
+                var client = _clinets[i];
+                client.TlsStream.Poll();
+                var status = client.TlsStream.GetStatus();
+   
+
+                switch (status)
+                {
+                    case StreamPeerTls.Status.Handshaking:
+                        GD.Print($"Client {client.ClientId} TLS handshake in progress...");
+                        break;
+
+                    case StreamPeerTls.Status.Connected:
+                        GD.Print($"Client {client.ClientId} TLS handshake completed!");
+                        if (client.TlsStream.GetAvailableBytes() > 0 || client.TlsStream.GetStream().GetAvailableBytes() > 0)
+                        {
+                            string msg = client.TlsStream.GetUtf8String(client.TlsStream.GetAvailableBytes());
+                            if (msg == "HELLO_GODOT")
+                            {
+                                GD.Print("Handshake successful with client: " + client.ClientId);
+                                client.TlsStream.PutUtf8String("HELLO_CLIENT"); // Respond to confirm handshake
+                            }
+                            GD.Print("Received from client: " + msg);
+                            _signalBus?.EmitSignal(nameof(SignalBus.SocketCommandRecieved), msg);
+                        }
+                        break;
+
+                    case StreamPeerTls.Status.Error:
+                        GD.PrintErr($"Client {client.ClientId} TLS handshake failed!");
+                        // Handle cleanup or disconnect client
+                        break;
+                    case StreamPeerTls.Status.Disconnected:
+                        _signalBus.ClientGuid = null;
+                        GD.Print("Client disconnected");
+                        _clinets.RemoveAt(i);
+                        break;
+                    default:
+                        _signalBus.ClientGuid = null;
+                        GD.Print("Client disconnected");
+                        _clinets.RemoveAt(i);
+                        GD.Print($"Client {client.ClientId} TLS status: {status}");
+                        break;
+                }
+
+
+            }
+
         }
 
-        public void SendMessage(string message)
+        public void SendMessageToClient(string clientId, string message)
         {
-            if (_client != null && _client.GetStatus() == StreamPeerTcp.Status.Connected)
+            var client =  _clinets.FirstOrDefault(c => c.ClientId == clientId);
+            if (client != null && client.TlsStream.GetStatus() == StreamPeerTls.Status.Connected)
             {
-                _client.PutUtf8String(message);
+                client.TlsStream.PutUtf8String(message);
+                
             }
         }
-
-        public bool HasClient()
-        {
-            return _client != null && _client.GetStatus() == StreamPeerTcp.Status.Connected;
-        }*/
     }
 }

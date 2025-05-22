@@ -1,78 +1,64 @@
 const express = require("express");
-const net = require("net");
 const bodyParser = require("body-parser");
 const swaggerUi = require("swagger-ui-express");
 const swaggerJsdoc = require("swagger-jsdoc");
-
+const tls = require("tls");
 const app = express();
-const HTTP_PORT = 3000; // Express API
-const TCP_PORT = 4000; // TCP socket server
+const HTTP_PORT = 3000;
+
+const GODOT_SERVER_ADDRESS = "127.0.0.1"; 
+const GODOT_SERVER_PORT = 5000;
 
 app.use(bodyParser.json());
 
-let sockets = []; // Store all connected TCP clients
+// TCP Client Setup
+let client;
+let connected = false;
 
-// 1. Create TCP server (YOU are the server)
-const tcpServer = net.createServer((socket) => {
-  console.log("New TCP client connected");
+function connectToGodot() {
 
-  sockets.push(socket);
-  socket.write("Welcome to the TCP server!\n");
-  socket.on("data", (data) => {
-    console.log("Received from TCP client:", data.toString());
+  const options = {
+    host: GODOT_SERVER_ADDRESS,
+    port: GODOT_SERVER_PORT,
+    // For self-signed certs during development, set this to false:
+    rejectUnauthorized: false,
+    // You can add ca: fs.readFileSync('path-to-ca.pem') if you have CA certs
+  };
+
+  client = tls.connect(options, () => {
+    if (client.authorized) {
+      console.log(`Connected securely to Godot server at ${GODOT_SERVER_ADDRESS}:${GODOT_SERVER_PORT}`);
+    } else {
+      console.warn(`Connected to Godot server but TLS NOT authorized:`, client.authorizationError);
+    }
+    connected = true;
+
+    client.write("HELLO_GODOT\n");
   });
 
-  socket.on("end", () => {
-    console.log("TCP client disconnected");
-    sockets = sockets.filter((s) => s !== socket);
+  client.on("data", (data) => {
+    console.log("Received from Godot:", data.toString());
   });
 
-  socket.on("error", (err) => {
-    console.error("TCP Socket error:", err);
-    sockets = sockets.filter((s) => s !== socket);
-  });
-});
-
-tcpServer.listen(TCP_PORT, () => {
-  console.log(`TCP Server listening on port ${TCP_PORT}`);
-});
-
-// 2. Express route to send message to all connected TCP clients
-app.post("/send", (req, res) => {
-  const { message } = req.body;
-
-  if (sockets.length === 0) {
-    return res.status(500).send("No TCP clients connected.");
-  }
-
-  sockets.forEach((socket) => {
-    socket.write(message);
+  client.on("close", () => {
+    console.log("Connection to Godot closed");
+    connected = false;
   });
 
-  console.log("Sent message to all TCP clients:", message);
-  res.send("Message sent to all connected TCP clients");
-});
+  client.on("error", (err) => {
+    console.error("Godot TLS error:", err.message);
+    connected = false;
+  });
+}
 
-// 3. Swagger setup
-const swaggerOptions = {
-  definition: {
-    openapi: "3.0.0",
-    info: {
-      title: "TCP Server Control API",
-      version: "1.0.0",
-    },
-  },
-  apis: ["./main.js"], // adjust to your file path if needed
-};
+connectToGodot();
 
-const swaggerSpec = swaggerJsdoc(swaggerOptions);
-app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
+// Express Route
 /**
  * @swagger
  * /send:
  *   post:
- *     summary: Send a message to all connected TCP clients
+ *     summary: Send a message to the Godot server
  *     requestBody:
  *       required: true
  *       content:
@@ -82,15 +68,52 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
  *             properties:
  *               message:
  *                 type: string
- *                 example: "Hello TCP Client!"
+ *                 example: "Hello from Swagger!"
  *     responses:
  *       200:
  *         description: Message sent successfully
+ *       500:
+ *         description: Connection issue
  */
+app.post("/send", (req, res) => {
+const { message } = req.body;
+
+  if (!client || !client.writable) {
+    return res.status(500).send("Not connected or client not writable");
+  }
+
+  try {
+    client.write(message + "\n", (err) => {
+      if (err) {
+        console.error("Error writing to Godot:", err.message);
+        return res.status(500).send("Failed to send message to Godot");
+      }
+      console.log("Sent to Godot:", message);
+      res.send("Message sent to Godot server");
+    });
+  } catch (err) {
+    console.error("Exception while sending message:", err.message);
+    return res.status(500).send("Internal server error");
+  }
+});
+
+const swaggerOptions = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Godot Control API",
+      version: "1.0.0",
+      description: "API to control Godot via TCP commands",
+    },
+  },
+  apis: ["./main.js"], 
+};
+
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 
 app.listen(HTTP_PORT, () => {
-  console.log(`Express server running on http://localhost:${HTTP_PORT}`);
-  console.log(
-    `Swagger docs available at http://localhost:${HTTP_PORT}/api-docs`
-  );
+  console.log(`Express server on http://localhost:${HTTP_PORT}`);
+  console.log(`Swagger docs at http://localhost:${HTTP_PORT}/api-docs`);
 });

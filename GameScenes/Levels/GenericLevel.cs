@@ -1,6 +1,8 @@
 ﻿using Godot;
 using NewGameProject.Assets.Shared;
 using NewGameProject.Helper;
+using NewGameProject.Misc.Extensions;
+using NewGameProject.ServerLogic;
 using NewGameProject.ServerLogic.Parsing;
 using Pliant.Runtime;
 using Pliant.Tree;
@@ -24,7 +26,7 @@ namespace NewGameProject.GameScenes.Levels
         protected SignalBus _signalBus;
         private GenericLevelUI _genericLevelUI;
         private SideMenu _sideMenu;
-
+        private SocketServer _socketServer;
  
 
         private Robot GetRobotOnTile(Vector2I gridPos)
@@ -57,6 +59,9 @@ namespace NewGameProject.GameScenes.Levels
             _wallMap = GetNode<TileMapLayer>("Map/WallMap");
             _signalBus = GetNode<SignalBus>("/root/SignalBus");
             _signalBus.LevelOrigin = GlobalPosition;
+            _socketServer = new SocketServer();
+            this.BecomePregnant(_socketServer);
+            _signalBus.SocketServer = _socketServer;
             _genericLevelUI = GetNode<GenericLevelUI>("LevelUI");
             _sideMenu = NodeHelper.GetSideMenu(this);
 
@@ -70,6 +75,7 @@ namespace NewGameProject.GameScenes.Levels
 
                 _signalBus.SocketCommandRecieved += ProcessSocketData;
             }
+            _signalBus.SocketServer.StartServer();
         }
 
 
@@ -90,7 +96,7 @@ namespace NewGameProject.GameScenes.Levels
                         robotArray.Add(robot.ToJsonDict());
                     }
                     string json = Json.Stringify(robotArray);
-                    _signalBus.SocketClient.SendMessage(json);
+                    _signalBus.SendSocketMessage(json);
                 }
                 else
                 {
@@ -198,10 +204,14 @@ namespace NewGameProject.GameScenes.Levels
 
         public override void _ExitTree()
         {
+
             if (_signalBus != null)
             {
 
                 _signalBus.SocketCommandRecieved -= ProcessSocketData;
+                _socketServer.QueueFree();
+                _socketServer = null;
+                _signalBus.SocketServer = null;
             }
 
         }

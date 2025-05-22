@@ -126,10 +126,10 @@ public partial class Robot : CharacterBody2D
             _simulationAborted = false;
             ICommand command = CommandFactory.FromDictionary(data);
             if (command.Id != null && command.Id == this.Id)
-            {
+             {
                 if (command is CheckRobotCommand checkCommand)
                 {
-                    _signalBus.SocketClient.SendMessage(this.ToJson());
+                    _signalBus.SendSocketMessage(this.ToJson());
                 }
                 if (command is ScanCommand scanCommand)
                 {
@@ -137,7 +137,7 @@ public partial class Robot : CharacterBody2D
                     if (scanCommand.Next)
                         direction = DirectionHelper.DirectionFromString(LastDirection);
                     TileData tile = _tileDetector.GetNextTile(this.GridPosition, direction);
-                    _signalBus.SocketClient.SendMessage(TileHelper.TileDataToJson(tile));
+                    _signalBus.SendSocketMessage(TileHelper.TileDataToJson(tile));
 
                 }
                 if (command is MoveCommand moveCommand)

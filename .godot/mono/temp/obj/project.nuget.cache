@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+A3vJrB1gGI=",
+  "dgSpecHash": "uE6RgOg9mKw=",
   "success": true,
-  "projectFilePath": "C:\\Diploma\\TestCommands\\New Game Project.csproj",
+  "projectFilePath": "C:\\DIPLOMA\\TESTCOMMANDS\\New Game Project.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ioffe\\.nuget\\packages\\antlr\\3.5.0.2\\antlr.3.5.0.2.nupkg.sha512",
     "C:\\Users\\Ioffe\\.nuget\\packages\\clrheapallocationanalyzer\\3.0.0\\clrheapallocationanalyzer.3.0.0.nupkg.sha512",
