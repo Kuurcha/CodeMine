@@ -96,6 +96,8 @@ using System;
             var mineralType = tileData.GetCustomData("Mineral_type").AsString();
             var quantity = tileData.GetCustomData("Quantity").AsDouble();
 
+       
+
             ItemType type = ItemTypeConverter.GetItemTypeFromDescription(mineralType);
             if (type != ItemType.Undefined)
             {

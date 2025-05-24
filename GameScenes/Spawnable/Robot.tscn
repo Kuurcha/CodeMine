@@ -1,8 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://bk7dw362a4yt7"]
+[gd_scene load_steps=33 format=3 uid="uid://bk7dw362a4yt7"]
 
-[ext_resource type="Script" uid="uid://bjq5coeocuwdv" path="res://GameScenes/Spawnable/Robot.cs" id="1_fq6qg"]
+[ext_resource type="Script" path="res://GameScenes/Spawnable/Robot.cs" id="1_fq6qg"]
 [ext_resource type="Texture2D" uid="uid://ce1484o6i2lb7" path="res://art/2d/robot/Centipede.png" id="2_nbnro"]
-[ext_resource type="Script" uid="uid://yamxmtpcnrpm" path="res://Misc/TileDetector.cs" id="3_hlxqg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1flnd"]
 atlas = ExtResource("2_nbnro")
@@ -280,7 +279,3 @@ animation = &"idle_left"
 z_index = 999
 position = Vector2(8, 8)
 shape = SubResource("CapsuleShape2D_frhep")
-
-[node name="TileDetector" type="Node2D" parent="."]
-position = Vector2(7, 7)
-script = ExtResource("3_hlxqg")

@@ -131,14 +131,18 @@ public partial class Robot : CharacterBody2D
                 {
                     _signalBus.SendSocketMessage(this.ToJson());
                 }
-                if (command is ScanCommand scanCommand)
+                if (command is ScanCommand scanCommand) 
                 {
                     Vector2I direction = new Vector2I(0, 0);
                     if (scanCommand.Next)
                         direction = DirectionHelper.DirectionFromString(LastDirection);
                     TileData tile = _tileDetector.GetNextTile(this.GridPosition, direction);
                     _signalBus.SendSocketMessage(TileHelper.TileDataToJson(tile));
-
+                }
+                if (command is DigCommand digCommand)
+                {
+                    Vector2I direction = DirectionHelper.DirectionFromString(this.LastDirection);
+                    _signalBus.EmitSignal(nameof(SignalBus.MineTile), 1);
                 }
                 if (command is MoveCommand moveCommand)
                 {

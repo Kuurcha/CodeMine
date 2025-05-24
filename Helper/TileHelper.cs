@@ -1,4 +1,5 @@
 ﻿using Godot;
+using NewGameProject.GameScenes.Spawnable.Mineral;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,24 @@ namespace NewGameProject.Helper
 {
     public static class TileHelper
     {
+
+
+
+
+
+        public static readonly Vector2I Gold = new Vector2I(2, 10);
+        public static readonly Vector2I Iron = new Vector2I(3, 10);
+        public static Vector2I GetAtlasCoords(string mineralType)
+        {
+            return mineralType switch
+            {
+                MineralType.Gold => TileHelper.Gold,
+                MineralType.Iron => TileHelper.Iron,
+                _ => throw new ArgumentException($"Unknown mineral type: {mineralType}")
+            };
+        }
+
+
         public static string TileDataToJson(TileData tileData)
         {
             if (tileData == null)

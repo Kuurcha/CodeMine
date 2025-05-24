@@ -20,20 +20,71 @@ namespace NewGameProject.ServerLogic.Parsing
                     }
                     if (commandTypeNode.Symbol.Value == "CheckCommand")
                     {
-            
                         return ParseCheckRobotCommand(commandTypeNode);
                     }
                     if (commandTypeNode.Symbol.Value == "ListCommand")
                     {
                         return new ListCommand();
                     }
-
+                    if (commandTypeNode.Symbol.Value == "ScanCommand")
+                    {
+                        return ParseScanCommand(commandTypeNode);
+                    }
+                    if (commandTypeNode.Symbol.Value == "DigCommand")
+                    {
+                        return ParseDigCommand(commandTypeNode);
+                    }
                 }
-
             }
-
             return null;
         }
+
+
+        private static DigCommand ParseDigCommand(InternalTreeNode node)
+        {
+            var digCmd = new DigCommand();
+
+            foreach (var child in node.Children)
+            {
+                if (child is InternalTreeNode internalChild)
+                {
+                    switch (internalChild.Symbol.Value)
+                    {
+                        case "Id":
+                            digCmd.Id = GetTokenValue(internalChild);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            return digCmd;
+        }
+
+        private static ScanCommand ParseScanCommand(InternalTreeNode node) {
+
+            var scanCmd = new ScanCommand();
+
+            foreach (var child in node.Children)
+            {
+                if (child is InternalTreeNode internalChild)
+                {
+                    switch (internalChild.Symbol.Value)
+                    {
+                        case "Id":
+                            scanCmd.Id = GetTokenValue(internalChild);
+                            break;
+                        case "Next":
+                            scanCmd.Next = true;
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+            return scanCmd;
+        }
+        
 
         private static CheckRobotCommand ParseCheckRobotCommand(InternalTreeNode node)
         {

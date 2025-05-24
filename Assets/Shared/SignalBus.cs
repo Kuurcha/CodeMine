@@ -22,6 +22,8 @@ public partial class SignalBus : Node
     {
         CurrentLevel = level;
     }
+    [Signal]
+    public delegate void MineTileEventHandler(Vector2I position, float amount);
 
     [Signal]
     public delegate void ProcessedCommandRecievedEventHandler(Dictionary data);

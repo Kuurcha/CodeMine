@@ -1,14 +1,17 @@
 ﻿using Godot;
 using NewGameProject.Assets.Shared;
+using NewGameProject.GameScenes.Spawnable.Mineral;
 using NewGameProject.Helper;
 using NewGameProject.Misc.Extensions;
 using NewGameProject.ServerLogic;
 using NewGameProject.ServerLogic.Parsing;
+using NewGameProject.ServerLogic.Parsing.Exceptions;
 using Pliant.Runtime;
 using Pliant.Tree;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -27,8 +30,26 @@ namespace NewGameProject.GameScenes.Levels
         private GenericLevelUI _genericLevelUI;
         private SideMenu _sideMenu;
         private SocketServer _socketServer;
- 
+        public int tileSize { get; set; } = 16;
 
+        private List<MineralTileData> _mineralTiles = new List<MineralTileData>();
+
+        internal virtual List<MineralTileData> MineralTiles
+        {
+            get => _mineralTiles;
+            set => _mineralTiles = value;
+        }
+
+        private void DrawMineralTile(MineralTileData data)
+        {
+
+            var tileSet = _floorMap.TileSet;
+            var sourceId = tileSet.GetSourceId(0);
+            Vector2I atlasCoords = TileHelper.GetAtlasCoords(data.MineralType);
+            _wallMap.SetCell(data.Position, sourceId: sourceId, atlasCoords: atlasCoords);
+            return;
+            GD.PrintErr($"Mineral tile not found for type: {data.MineralType}");
+        }
         private Robot GetRobotOnTile(Vector2I gridPos)
         {
      
@@ -64,7 +85,10 @@ namespace NewGameProject.GameScenes.Levels
             _signalBus.SocketServer = _socketServer;
             _genericLevelUI = GetNode<GenericLevelUI>("LevelUI");
             _sideMenu = NodeHelper.GetSideMenu(this);
-
+            foreach (var tile in _mineralTiles)
+            {
+                DrawMineralTile(tile);
+            }
 
             if (_signalBus == null)
             {
@@ -74,36 +98,102 @@ namespace NewGameProject.GameScenes.Levels
             {
 
                 _signalBus.SocketCommandRecieved += ProcessSocketData;
+            
             }
+            _signalBus.MineTile += MineTile;
             _signalBus.SocketServer.StartServer();
+
         }
 
+
+        private void MineTile(Vector2I position, float quantity)
+        {
+            var tileToMine = _mineralTiles.FirstOrDefault(tile => tile.Position == position);
+
+
+            if (tileToMine == null)
+                return;
+
+            tileToMine.Quantity -= quantity;
+            if (tileToMine.Quantity < 0)
+            {
+                _mineralTiles.Remove(tileToMine);
+                _wallMap.SetCell(tileToMine.Position * tileSize);
+            }
+
+
+        }
 
         private void ProcessSocketData(string socketData)
         {
 
             ParseEngine parser = new ParseEngine(this._signalBus.CurrentGrammar);
-            InternalTreeNode tree = ParserHelper.ParseTree(parser, socketData);
-            if (tree != null)
+            try
             {
-                var command = CommandBuilder.BuildCommand(tree);
-
-                if (command is ListCommand)
+                InternalTreeNode tree = ParserHelper.ParseTree(parser, socketData);
+                if (tree != null)
                 {
-                    var robotArray = new Godot.Collections.Array<Variant>();
-                    foreach (var robot in _robots)
+                    var command = CommandBuilder.BuildCommand(tree);
+                    if (command is null)
                     {
-                        robotArray.Add(robot.ToJsonDict());
+                        _signalBus.SendSocketMessage("Что-то пошло не так, неудалось расшифровать команду!");
                     }
-                    string json = Json.Stringify(robotArray);
-                    _signalBus.SendSocketMessage(json);
+                    else
+                    {
+                        if (command is ListCommand)
+                        {
+                            var robotArray = new Godot.Collections.Array<Variant>();
+                            foreach (var robot in _robots)
+                            {
+                                robotArray.Add(robot.ToJsonDict());
+                            }
+                            string json = Json.Stringify(robotArray);
+                            _signalBus.SendSocketMessage(json);
+                        }
+                       
+                        else
+                        {   
+                            var serializedCommand = command.ToDictionary();
+                            bool shouldEmit = true;
+
+
+                            //Если нету совпадения айди и робота - уведомить об этом.
+                            if (command is ScanCommand || command is CheckRobotCommand || command is DigCommand || command is MoveCommand)
+                            {
+                                shouldEmit = false;
+                                foreach (var scanRobot in _robots)
+                                {
+                                    if (scanRobot.Id == command.Id)
+                                    {
+                                        shouldEmit = true;
+                                        break;
+                                    }
+                                }
+                                _signalBus.SendSocketMessage($"Не найден агент: {command.Id}");
+                            }
+                            if (shouldEmit)
+                            {
+                                _signalBus.EmitSignal(nameof(SignalBus.ProcessedCommandRecieved), serializedCommand);
+                            }
+
+                        }
+                    }
+
                 }
                 else
                 {
-                    var serializedCommand = command.ToDictionary();
-                    _signalBus.EmitSignal(nameof(SignalBus.ProcessedCommandRecieved), serializedCommand);
+                    _signalBus.SendSocketMessage("Неизвестная команда!");
                 }
             }
+            catch (UnknownCommandException)
+            {
+                _signalBus.SendSocketMessage("Неизвестная команда!");
+            }
+            catch (Exception unknownException)
+            {
+                _signalBus.SendSocketMessage($"Неизвестная ошибка! {unknownException.Message}");
+            }    
+            
         }
 
         private Vector2 ComputeRealMousePos(Camera2D camera, Vector2 mousePos)

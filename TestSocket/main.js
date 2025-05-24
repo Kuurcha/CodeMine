@@ -97,6 +97,27 @@ const { message } = req.body;
   }
 });
 
+/**
+ * @swagger
+ * /connect:
+ *   post:
+ *     summary: Connect to the Godot server
+ *     responses:
+ *       200:
+ *         description: Connected successfully
+ *       500:
+ *         description: Connection issue
+ */
+app.post("/connect", (req, res) => {
+  try {
+    connectToGodot();
+    return res.status(200).send("OK! Connected!");
+  } catch (err) {
+    console.error("Exception while connecting to godot:", err.message);
+    return res.status(500).send("Internal server error");
+  }
+});
+
 const swaggerOptions = {
   definition: {
     openapi: "3.0.0",

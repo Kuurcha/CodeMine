@@ -22,6 +22,8 @@ namespace NewGameProject.ServerLogic.Parsing
                 "List" => ListCommand.FromDictionary(commandDict),
                 "CheckRobot" => CheckRobotCommand.FromDictionary(commandDict),
                 "Move" => MoveCommand.FromDictionary(commandDict),
+                "Scan" => ScanCommand.FromDictionary(commandDict),
+                "Dig" => DigCommand.FromDictionary(commandDict),
                 _ => null
             };
         }
